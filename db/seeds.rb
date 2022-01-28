@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #TODO: seed with rental and user data, see if the many to many associations is working. 
+
+user.create()

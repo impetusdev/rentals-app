@@ -24,6 +24,7 @@
     - travel_time
     - image
     - link to the apartment
+    - link to the apartment
 - destination_locations
     - address
     - frequency
