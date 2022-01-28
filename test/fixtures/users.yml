@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyText
+  time_value: 1.5
+
+two:
+  username: MyString
+  password_digest: MyText
+  time_value: 1.5
