@@ -1,0 +1,12 @@
+<h3>All Rentals</h3>
+<div class="rental-wrapper">
+    <div><strong>Street</strong></div>
+    <div><strong>Suburb</strong></div>
+    <div><strong>Price (weekly)</strong></div>
+
+    <% @rentals.each do |rental| %>
+        <div><%= link_to rental.street_address, rental_path(rental.id) %></div>
+        <div><%= rental.suburb %></div>
+        <div>$<%= rental.price %></div>
+    <% end %>
+</div>
