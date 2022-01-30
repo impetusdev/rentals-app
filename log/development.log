@@ -1733,3 +1733,133 @@ Processing by RentalsController#new as HTML
 Completed 200 OK in 48ms (Views: 41.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/rentals/new" for ::1 at 2022-01-30 14:52:00 +1100
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (3.3ms)
+  Rendered rentals/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 62ms (Views: 29.8ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 14:52:01 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals/17" for ::1 at 2022-01-30 14:52:02 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rentals/17" for ::1 at 2022-01-30 14:52:03 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rentals/17" for ::1 at 2022-01-30 14:52:05 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals/17" for ::1 at 2022-01-30 14:53:28 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 19.3ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/rentals/17/edit" for ::1 at 2022-01-30 14:53:29 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (1.8ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (3.3ms)
+  Rendered rentals/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rentals/17/edit" for ::1 at 2022-01-30 14:54:11 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (3.0ms)
+  Rendered rentals/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 60ms (Views: 22.1ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/rentals/17/edit" for ::1 at 2022-01-30 14:55:01 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (4.5ms)
+  Rendered rentals/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 58ms (Views: 28.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 14:55:02 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rentals/18" for ::1 at 2022-01-30 14:55:10 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals/18/edit" for ::1 at 2022-01-30 14:55:12 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (4.4ms)
+  Rendered rentals/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 39ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rentals/18" for ::1 at 2022-01-30 14:55:44 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 1.0ms)
+
+
