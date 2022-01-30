@@ -31,6 +31,11 @@
     - frequency
 - create_destination_rental (3-way JOIN)
     - time taken for travel
+- suburb 
+    - name 
+    - safety_rating
+    - postcode
+    
 - user
     - name
     - time value for money
