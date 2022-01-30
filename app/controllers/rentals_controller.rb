@@ -32,5 +32,4 @@ class RentalsController < ApplicationController
   private def rental_params
     params.require(:rental).permit Rental.list_params
   end
-  
 end
