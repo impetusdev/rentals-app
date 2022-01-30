@@ -1863,3 +1863,316 @@ Processing by RentalsController#show as HTML
 Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4448261239247367045)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateDestinations (20220130040329)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "destinations" ("id" bigserial primary key, "street_address" text, "suburb" text, "frequency" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220130040329_create_destinations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220130040329"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4448261239247367045)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mDestination Load (3.8ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" ORDER BY "destinations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/rentals/18" for ::1 at 2022-01-30 15:57:32 +1100
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laure/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 66ms (Views: 27.9ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 15:57:34 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser::HABTM_Rentals Destroy (1.4ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "time_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "laurence"], ["password_digest", "chicken"], ["time_value", 30.0], ["created_at", "2022-01-30 05:01:06.448890"], ["updated_at", "2022-01-30 05:01:06.448890"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[36mRental Load (1.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mRental::HABTM_Users Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 17]]
+  ↳ db/seeds.rb:11
+  [1m[36mRental Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mRental::HABTM_Users Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 18]]
+  ↳ db/seeds.rb:11
+  [1m[36mRental Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mRental Create (0.8ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "8 Carrington Street"], ["suburb", "Strathfield"], ["price", 690.0], ["image", "https://i.imgur.com/XXENw5K.jpg?1"], ["created_at", "2022-01-30 05:01:06.499629"], ["updated_at", "2022-01-30 05:01:06.499629"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mRental Create (0.5ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2E/19-21 George Street"], ["suburb", "North Strathfield"], ["price", 610.0], ["image", "https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg"], ["created_at", "2022-01-30 05:01:06.503253"], ["updated_at", "2022-01-30 05:01:06.503253"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mRental Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2 Beronga Street"], ["suburb", "North Strathfield"], ["price", 650.0], ["image", "https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg"], ["created_at", "2022-01-30 05:01:06.506510"], ["updated_at", "2022-01-30 05:01:06.506510"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser::HABTM_Rentals Create (1.0ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 19], ["user_id", 7]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser::HABTM_Rentals Create (0.4ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 20], ["user_id", 7]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser::HABTM_Rentals Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 21], ["user_id", 7]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mDestination Create (3.0ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "12 Bowler Avenue"], ["suburb", "Fairfield"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:06.568694"], ["updated_at", "2022-01-30 05:01:06.568694"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mDestination Create (0.5ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "15 Broadway"], ["suburb", "Ultimo"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:06.573150"], ["updated_at", "2022-01-30 05:01:06.573150"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "129 Harrington street"], ["suburb", "Sydney"], ["frequency", 0.3], ["created_at", "2022-01-30 05:01:06.574765"], ["updated_at", "2022-01-30 05:01:06.574765"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "85 Castlereagh street"], ["suburb", "Sydney"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:06.576246"], ["updated_at", "2022-01-30 05:01:06.576246"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "657 Punchbowl road"], ["suburb", "Punchbowl"], ["frequency", 0.75], ["created_at", "2022-01-30 05:01:06.577720"], ["updated_at", "2022-01-30 05:01:06.577720"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "F03, University of Sydney, Eastern Ave"], ["suburb", "Camperdown"], ["frequency", 3.0], ["created_at", "2022-01-30 05:01:06.579183"], ["updated_at", "2022-01-30 05:01:06.579183"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser::HABTM_Rentals Destroy (0.9ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "time_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "laurence"], ["password_digest", "chicken"], ["time_value", 30.0], ["created_at", "2022-01-30 05:01:43.260371"], ["updated_at", "2022-01-30 05:01:43.260371"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (1.0ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRental Create (0.5ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "8 Carrington Street"], ["suburb", "Strathfield"], ["price", 690.0], ["image", "https://i.imgur.com/XXENw5K.jpg?1"], ["created_at", "2022-01-30 05:01:43.304028"], ["updated_at", "2022-01-30 05:01:43.304028"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mRental Create (0.4ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2E/19-21 George Street"], ["suburb", "North Strathfield"], ["price", 610.0], ["image", "https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg"], ["created_at", "2022-01-30 05:01:43.307714"], ["updated_at", "2022-01-30 05:01:43.307714"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mRental Create (1.3ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2 Beronga Street"], ["suburb", "North Strathfield"], ["price", 650.0], ["image", "https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg"], ["created_at", "2022-01-30 05:01:43.310765"], ["updated_at", "2022-01-30 05:01:43.310765"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (0.6ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 22], ["user_id", 8]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (2.0ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 23], ["user_id", 8]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 24], ["user_id", 8]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[36mDestination Load (1.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.5ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.5ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.9ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.4ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mDestination Create (3.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "12 Bowler Avenue"], ["suburb", "Fairfield"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:43.394072"], ["updated_at", "2022-01-30 05:01:43.394072"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mDestination Create (0.5ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "15 Broadway"], ["suburb", "Ultimo"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:43.399819"], ["updated_at", "2022-01-30 05:01:43.399819"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mDestination Create (2.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "129 Harrington street"], ["suburb", "Sydney"], ["frequency", 0.3], ["created_at", "2022-01-30 05:01:43.408253"], ["updated_at", "2022-01-30 05:01:43.408253"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "85 Castlereagh street"], ["suburb", "Sydney"], ["frequency", 2.0], ["created_at", "2022-01-30 05:01:43.411842"], ["updated_at", "2022-01-30 05:01:43.411842"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "657 Punchbowl road"], ["suburb", "Punchbowl"], ["frequency", 0.75], ["created_at", "2022-01-30 05:01:43.413191"], ["updated_at", "2022-01-30 05:01:43.413191"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "F03, University of Sydney, Eastern Ave"], ["suburb", "Camperdown"], ["frequency", 3.0], ["created_at", "2022-01-30 05:01:43.414431"], ["updated_at", "2022-01-30 05:01:43.414431"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72

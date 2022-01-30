@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'destinations/new'
+  get 'destinations/create'
+  get 'destinations/index'
+  get 'destinations/show'
+  get 'destinations/edit'
+  get 'destinations/update'
+  get 'destinations/destroy'
   resources :rentals
   # resources :users
 
