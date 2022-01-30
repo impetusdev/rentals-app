@@ -1,15 +1,35 @@
-User.destroy_all
+puts 'Creating the suburbs table using a csv file'
+Suburb.destroy_all
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
+
+#TODO: NEED HELP REGARDING THIS. 
+csv.each do |row|
+    row = row.to_hash
+    Suburb.create!(
+        lga: row[row.keys[0]],
+        name: row['name'],
+        postcode: row['postcode'],
+        assault_rate: row['assault_rate']
+    )
+end
+
 
 puts 'Creating new User seed data'
+User.destroy_all
+
 u1 = User.create!(
-username: 'laurence',
-password_digest: 'chicken',
-time_value: 30
+    username: 'laurence',
+    password_digest: 'chicken',
+    time_value: 30
 )
 
-Rental.destroy_all
 
+Rental.destroy_all
 puts 'Creating new Rental seed data'
+
 r1 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
     street_address: '8 Carrington Street',
     suburb: 'Strathfield',
@@ -78,21 +98,3 @@ d6 = Destination.create!(
 #u1.destinations << d1 << d2 << d3
 #u2.destinations << d4 << d5
 #u3.destinations << d6
-
-puts 'Creating the suburbs table using a csv file'
-Suburb.destroy_all
-require 'csv'
-
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
-
-#TODO: NEED HELP REGARDING THIS. 
-csv.each do |row|
-    row = row.to_hash
-    Suburb.create!(
-        lga: row[row.keys[0]],
-        name: row['name'],
-        postcode: row['postcode'],
-        assault_rate: row['assault_rate']
-    )
-end
