@@ -2176,3 +2176,1241 @@ Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.6ms)
   ↳ db/seeds.rb:72
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:72
+Started GET "/rentals" for ::1 at 2022-01-30 16:15:10 +1100
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/laure/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 74ms (Views: 36.6ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/rentals/22" for ::1 at 2022-01-30 16:15:13 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 40.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rentals/22" for ::1 at 2022-01-30 16:15:15 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 26.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rentals/22/edit" for ::1 at 2022-01-30 16:15:17 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (4.6ms)
+  Rendered rentals/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 37ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rentals/22/edit" for ::1 at 2022-01-30 16:19:07 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (1.5ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.0ms)
+  Rendered rentals/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 70ms (Views: 37.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/rentals/22/edit" for ::1 at 2022-01-30 16:19:32 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (2.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.8ms)
+  Rendered rentals/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 49ms (Views: 36.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rentals/22/edit" for ::1 at 2022-01-30 16:19:44 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (1.5ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.7ms)
+  Rendered rentals/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/rentals/22" for ::1 at 2022-01-30 16:19:46 +1100
+Processing by RentalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vb4Ras8yTUH/umgoO1bB3tW4/OmiuVwvjhcPKmtYB7YsKYLVsdWcapONYXBgDTc/wtHZrAbCY24/yMMKU/T/Rg==", "rental"=>{"street_address"=>"8 Carrington Street", "suburb"=>"Strathfield", "price"=>"690.0", "image"=>"https://i.imgur.com/XXENw5K.jpg?1"}, "commit"=>"Update Rental", "id"=>"22"}
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.6ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "suburb" = $2, "price" = $3, "image" = $4, "updated_at" = $5 WHERE "rentals"."id" = $6[0m  [["street_address", "8 Carrington Street"], ["suburb", "Strathfield"], ["price", 690.0], ["image", "https://i.imgur.com/XXENw5K.jpg?1"], ["updated_at", "2022-01-30 05:19:46.109311"], ["id", 23]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.6ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "suburb" = $2, "price" = $3, "image" = $4, "updated_at" = $5 WHERE "rentals"."id" = $6[0m  [["street_address", "8 Carrington Street"], ["suburb", "Strathfield"], ["price", 690.0], ["image", "https://i.imgur.com/XXENw5K.jpg?1"], ["updated_at", "2022-01-30 05:19:46.113848"], ["id", 24]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  Rendering rentals/update.html.erb within layouts/application
+  Rendered rentals/update.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 17.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/rentals/22/edit" for ::1 at 2022-01-30 16:20:51 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.7ms)
+  Rendered rentals/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 75ms (Views: 43.8ms | ActiveRecord: 16.0ms)
+
+
+Started PATCH "/rentals/22" for ::1 at 2022-01-30 16:20:55 +1100
+Processing by RentalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9xhLUWKG5opCM4GV410amqIK228cPhAUJXNqZNvKYbmS/KSO23KsUU/x14M1oKLfeEOKBgLxwHhSgGJq8PRdg==", "rental"=>{"street_address"=>"820Carrington Street", "suburb"=>"Strathfield", "price"=>"690.0", "image"=>"https://i.imgur.com/XXENw5K.jpg?1"}, "commit"=>"Update Rental", "id"=>"22"}
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (1.1ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820Carrington Street"], ["updated_at", "2022-01-30 05:20:55.126122"], ["id", 22]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.4ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820Carrington Street"], ["updated_at", "2022-01-30 05:20:55.131059"], ["id", 23]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.5ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820Carrington Street"], ["updated_at", "2022-01-30 05:20:55.134799"], ["id", 24]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+Redirected to http://localhost:3000/rentals/22
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/rentals/22" for ::1 at 2022-01-30 16:20:55 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/rentals/22" for ::1 at 2022-01-30 16:21:00 +1100
+Processing by RentalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9xhLUWKG5opCM4GV410amqIK228cPhAUJXNqZNvKYbmS/KSO23KsUU/x14M1oKLfeEOKBgLxwHhSgGJq8PRdg==", "rental"=>{"street_address"=>"820 Carrington Street ", "suburb"=>"Strathfield", "price"=>"690.0", "image"=>"https://i.imgur.com/XXENw5K.jpg?1"}, "commit"=>"Update Rental", "id"=>"22"}
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.8ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820 Carrington Street "], ["updated_at", "2022-01-30 05:21:00.277471"], ["id", 22]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.6ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820 Carrington Street "], ["updated_at", "2022-01-30 05:21:00.286875"], ["id", 23]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (0.3ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "820 Carrington Street "], ["updated_at", "2022-01-30 05:21:00.291862"], ["id", 24]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+Redirected to http://localhost:3000/rentals/22
+Completed 302 Found in 27ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/rentals/22" for ::1 at 2022-01-30 16:21:00 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRental Load (1.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:21:04 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:21:35 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (2.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 51ms (Views: 29.7ms | ActiveRecord: 13.1ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser::HABTM_Rentals Destroy (0.9ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "time_value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "laurence"], ["password_digest", "chicken"], ["time_value", 30.0], ["created_at", "2022-01-30 05:21:44.363894"], ["updated_at", "2022-01-30 05:21:44.363894"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[36mRental Load (1.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (1.0ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRental::HABTM_Users Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals_users" WHERE "rentals_users"."rental_id" = $1[0m  [["rental_id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[36mRental Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRental Create (0.8ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "8 Carrington Street"], ["suburb", "Strathfield"], ["price", 690.0], ["image", "https://i.imgur.com/XXENw5K.jpg?1"], ["created_at", "2022-01-30 05:21:44.409217"], ["updated_at", "2022-01-30 05:21:44.409217"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mRental Create (0.5ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2E/19-21 George Street"], ["suburb", "North Strathfield"], ["price", 610.0], ["image", "https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg"], ["created_at", "2022-01-30 05:21:44.412493"], ["updated_at", "2022-01-30 05:21:44.412493"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mRental Create (0.4ms)[0m  [1m[32mINSERT INTO "rentals" ("street_address", "suburb", "price", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["street_address", "2 Beronga Street"], ["suburb", "North Strathfield"], ["price", 650.0], ["image", "https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg"], ["created_at", "2022-01-30 05:21:44.414944"], ["updated_at", "2022-01-30 05:21:44.414944"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (0.7ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 25], ["user_id", 9]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 26], ["user_id", 9]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser::HABTM_Rentals Create (0.3ms)[0m  [1m[32mINSERT INTO "rentals_users" ("rental_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["rental_id", 27], ["user_id", 9]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.5ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.3ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mDestination Destroy (0.2ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mDestination Create (1.2ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "12 Bowler Avenue"], ["suburb", "Fairfield"], ["frequency", 2.0], ["created_at", "2022-01-30 05:21:44.483107"], ["updated_at", "2022-01-30 05:21:44.483107"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mDestination Create (0.4ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "15 Broadway"], ["suburb", "Ultimo"], ["frequency", 2.0], ["created_at", "2022-01-30 05:21:44.490979"], ["updated_at", "2022-01-30 05:21:44.490979"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "129 Harrington street"], ["suburb", "Sydney"], ["frequency", 0.3], ["created_at", "2022-01-30 05:21:44.492730"], ["updated_at", "2022-01-30 05:21:44.492730"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "85 Castlereagh street"], ["suburb", "Sydney"], ["frequency", 2.0], ["created_at", "2022-01-30 05:21:44.494484"], ["updated_at", "2022-01-30 05:21:44.494484"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mDestination Create (0.3ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "657 Punchbowl road"], ["suburb", "Punchbowl"], ["frequency", 0.75], ["created_at", "2022-01-30 05:21:44.496158"], ["updated_at", "2022-01-30 05:21:44.496158"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("street_address", "suburb", "frequency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["street_address", "F03, University of Sydney, Eastern Ave"], ["suburb", "Camperdown"], ["frequency", 3.0], ["created_at", "2022-01-30 05:21:44.497668"], ["updated_at", "2022-01-30 05:21:44.497668"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+Started GET "/rentals" for ::1 at 2022-01-30 16:21:45 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 61ms (Views: 38.3ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/rentals/25" for ::1 at 2022-01-30 16:21:48 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mRental Load (1.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rentals/25/edit" for ::1 at 2022-01-30 16:21:49 +1100
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:19
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (3.2ms)
+  Rendered rentals/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/rentals/25" for ::1 at 2022-01-30 16:21:52 +1100
+Processing by RentalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Qgd51LfO06vZFvTw89oHmeyzMLEjjySWqVcRP/6QZNsn45YLDjqZcNTUouYlJ7/cNvph2D1A9PrepBkx1a5Yw==", "rental"=>{"street_address"=>"10 Carrington Street", "suburb"=>"Strathfield", "price"=>"690.0", "image"=>"https://i.imgur.com/XXENw5K.jpg?1"}, "commit"=>"Update Rental", "id"=>"25"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[36mRental Update (1.4ms)[0m  [1m[33mUPDATE "rentals" SET "street_address" = $1, "updated_at" = $2 WHERE "rentals"."id" = $3[0m  [["street_address", "10 Carrington Street"], ["updated_at", "2022-01-30 05:21:52.114926"], ["id", 25]]
+  ↳ app/controllers/rentals_controller.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rentals_controller.rb:23
+Redirected to http://localhost:3000/rentals/25
+Completed 302 Found in 16ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/rentals/25" for ::1 at 2022-01-30 16:21:52 +1100
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT  "rentals".* FROM "rentals" WHERE "rentals"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:21:55 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:22:24 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 58ms (Views: 31.6ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:26:21 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 37.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:26:26 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:26:33 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:06 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:07 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:31 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 70ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:39 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 101ms (Views: 96.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:40 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:28:43 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:29:08 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 77ms (Views: 66.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:30:15 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:30:19 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 60ms (Views: 51.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:30:24 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 64ms (Views: 55.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:31:54 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:32:03 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:32:53 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  Rendered destinations/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:33:56 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  Rendered destinations/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:34:10 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  Rendered destinations/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:34:23 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  Rendered destinations/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:34:51 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  Rendered destinations/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:37:51 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (4.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 69ms (Views: 46.8ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:39:23 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 64ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:39:24 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:40:07 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 62ms (Views: 51.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:40:33 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.0ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 50ms (Views: 42.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:07 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:08 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:19 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 53ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:19 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:20 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:27 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (2.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:41:28 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:41:36 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (4.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 77ms (Views: 38.4ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:42:28 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:42:35 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:42:41 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:42:51 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-01-30 16:42:56 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/laure/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/laure/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (8.8ms)
+  Rendered /Users/laure/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/laure/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:42:58 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:42:59 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/destinations/new" for ::1 at 2022-01-30 16:43:00 +1100
+Processing by DestinationsController#new as HTML
+  Rendering destinations/new.html.erb within layouts/application
+  Rendered destinations/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:43:01 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:43:01 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rentals/new" for ::1 at 2022-01-30 16:43:02 +1100
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.1ms)
+  Rendered rentals/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:43:04 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 31.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/destinations/new" for ::1 at 2022-01-30 16:43:04 +1100
+Processing by DestinationsController#new as HTML
+  Rendering destinations/new.html.erb within layouts/application
+  Rendered destinations/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations/new" for ::1 at 2022-01-30 16:43:59 +1100
+Processing by DestinationsController#new as HTML
+  Rendering destinations/new.html.erb within layouts/application
+  Rendered destinations/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:44:00 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.5ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:44:03 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Destination:0x000000010e40c518>):
+    2: <%= link_to '[Edit]', edit_destination_path %>
+    3: <%= link_to '[Delete]', destination_path(@destination.id), method: 'delete' %>
+    4: <br>
+    5: <%= image_tag @destination.image, class: 'destination_img' %>
+    6: <p>Price: $<%= @destination.price %></p>
+  
+app/views/destinations/show.html.erb:5:in `_app_views_destinations_show_html_erb___4532323340715211429_88180'
+Started GET "/destinations" for ::1 at 2022-01-30 16:44:31 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:44:32 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:44:37 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (2.6ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 31.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:44:43 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:44:58 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (1.0ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 21.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:45:08 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (2.1ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 20.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:46:30 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 19.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/destinations/new" for ::1 at 2022-01-30 16:46:32 +1100
+Processing by DestinationsController#new as HTML
+  Rendering destinations/new.html.erb within layouts/application
+  Rendered destinations/_form.html.erb (5.4ms)
+  Rendered destinations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:46:51 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (1.3ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 43ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:46:52 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:46:53 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 57ms (Views: 47.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:47:07 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (1.7ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:47:09 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:47:10 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destinations/13/edit" for ::1 at 2022-01-30 16:47:11 +1100
+Processing by DestinationsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.4ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:19
+  Rendering destinations/edit.html.erb within layouts/application
+  Rendered destinations/_form.html.erb (4.6ms)
+  Rendered destinations/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destinations/13/edit" for ::1 at 2022-01-30 16:47:37 +1100
+Processing by DestinationsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.5ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:19
+  Rendering destinations/edit.html.erb within layouts/application
+  Rendered destinations/_form.html.erb (4.2ms)
+  Rendered destinations/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/destinations/13/edit" for ::1 at 2022-01-30 16:47:45 +1100
+Processing by DestinationsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:19
+  Rendering destinations/edit.html.erb within layouts/application
+  Rendered destinations/_form.html.erb (5.5ms)
+  Rendered destinations/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:47:54 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rentals/new" for ::1 at 2022-01-30 16:47:55 +1100
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (8.5ms)
+  Rendered rentals/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:47:58 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.3ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/destinations/new" for ::1 at 2022-01-30 16:47:58 +1100
+Processing by DestinationsController#new as HTML
+  Rendering destinations/new.html.erb within layouts/application
+  Rendered destinations/_form.html.erb (5.3ms)
+  Rendered destinations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:47:59 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rentals/new" for ::1 at 2022-01-30 16:47:59 +1100
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (7.6ms)
+  Rendered rentals/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 16:48:00 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (3.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 38ms (Views: 31.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:48:10 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.1ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 32.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:48:23 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 30.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:48:24 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/destinations/13" for ::1 at 2022-01-30 16:48:25 +1100
+Processing by DestinationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fmowGKm7kLJuHcIG7BUHkl7wN2poThyive7HGvXqxG3v/aOn11xBmQIqy163TvFzSZkSL8w1I+MMMQs6zUY8nQ==", "id"=>"13"}
+No template found for DestinationsController#destroy, rendering head :no_content
+Completed 204 No Content in 97ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:48:59 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 17.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:49:03 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.2ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+  Rendering destinations/show.html.erb within layouts/application
+  Rendered destinations/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 28.5ms | ActiveRecord: 12.3ms)
+
+
+Started DELETE "/destinations/13" for ::1 at 2022-01-30 16:49:04 +1100
+Processing by DestinationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9Fq9leXJGWdMs8g/DlEi0llYIOk8D/Lo3UlvU4dUDmNlzS4qmy7ITCCEwWdVCtQzTjEFrJh0zalslqNzv/j2kw==", "id"=>"13"}
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/destinations_controller.rb:29
+  [1m[36mDestination Destroy (0.9ms)[0m  [1m[31mDELETE FROM "destinations" WHERE "destinations"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/destinations_controller.rb:29
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/destinations_controller.rb:29
+No template found for DestinationsController#destroy, rendering head :no_content
+Completed 204 No Content in 91ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/destinations/13" for ::1 at 2022-01-30 16:49:18 +1100
+Processing by DestinationsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT  "destinations".* FROM "destinations" WHERE "destinations"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/destinations_controller.rb:15
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Destination with 'id'=13):
+  
+app/controllers/destinations_controller.rb:15:in `show'
+Started GET "/destinations" for ::1 at 2022-01-30 16:49:21 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 49ms (Views: 26.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:49:37 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (2.6ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 60ms (Views: 34.5ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 16:49:54 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.8ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 18:08:59 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (1.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rentals/new" for ::1 at 2022-01-30 18:09:09 +1100
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (5.1ms)
+  Rendered rentals/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 72ms (Views: 26.8ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/rentals" for ::1 at 2022-01-30 18:09:10 +1100
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (2.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 49ms (Views: 43.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/destinations" for ::1 at 2022-01-30 18:09:10 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.9ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 0.9ms)
+
+

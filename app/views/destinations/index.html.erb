@@ -1,2 +1,12 @@
-<h1>Destinations#index</h1>
-<p>Find me in app/views/destinations/index.html.erb</p>
+<h3>All Destinations</h3>
+<div class="wrapper" id="destination-wrapper">
+    <div><strong>Street</strong></div>
+    <div><strong>Suburb</strong></div>
+    <div><strong>Frequency (per week)</strong></div>
+
+    <% @destinations.each do |destination| %>
+        <div><%= link_to destination.street_address, destination_path(destination.id) %></div>
+        <div><%= destination.suburb %></div>
+        <div><%= destination.frequency %></div>
+    <% end %>
+</div>

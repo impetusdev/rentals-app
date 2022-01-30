@@ -1,2 +1,6 @@
-<h1>Destinations#show</h1>
-<p>Find me in app/views/destinations/show.html.erb</p>
+<h3><%= "Details for #{@destination.street_address}, #{@destination.suburb}" %></h3>
+<%= link_to '[Edit]', edit_destination_path %>
+<%= link_to '[Delete]', destination_path(@destination.id), method: 'delete' %>
+
+<br>
+<p><strong>Frequency:</strong> <%= @destination.frequency %></p>

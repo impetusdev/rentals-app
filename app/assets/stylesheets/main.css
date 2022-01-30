@@ -2,6 +2,7 @@ body {
     background-color: #323437;
     color: #d1d0c5;
     font-family: 'Roboto', sans-serif;
+    padding-left: 22px;
 }
 
 a {
@@ -25,13 +26,12 @@ a:hover {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 150px 100px;
+    grid-template-columns: auto auto auto; 
     grid-gap: 10px;
-    background-color: #d1d0c5;
-    color: #444;
-    padding: 10px;
+    background-color: #4a4a4a;
+    grid-column-gap: 30px;
+    padding: 20px;
     width: fit-content;
-    border: grey;
 }
 
 .grid-item {
@@ -39,27 +39,12 @@ a:hover {
     padding: 10px;
 }
 
-.rental-wrapper {
-    display: grid;
-    /* CHANGE YOUR NUMBER OF COLS HERE  */
+#rental-wrapper {
     grid-template-columns: auto auto auto; 
-    grid-gap: 10px;
-    background-color: #4a4a4a;
-    grid-column-gap: 30px;
-    padding: 20px;
-    width: fit-content;
-    border: rgb(189, 131, 131);
 }
 
-.destination-wrapper {
-    display: grid;
+#destination-wrapper {
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    background-color: #4a4a4a;
-    /* color: white; */
-    padding: 20px;
-    width: fit-content;
-    border: rgb(189, 131, 131);
 }
 
 .col-heading {
@@ -67,6 +52,7 @@ a:hover {
     padding: 10px;
 }
 
+/* TODO: figure out how to get this to be absolute */
 hr.style-one {
     border: 0;
     height: 1px;
@@ -83,4 +69,9 @@ hr.style-one {
 
 .rental_img {
     padding: 30px 0px 30px 0px;
+}
+
+.nav-link {
+    padding: 10px 10px 10px 0px;
+    font-size: large;
 }

@@ -3,4 +3,4 @@
 <%= link_to '[Delete]', rental_path(@rental.id), method: 'delete' %>
 <br>
 <%= image_tag @rental.image, class: 'rental_img' %>
-<p>Price: $<%= @rental.price %></p>
+<p><strong>Price:</strong> $<%= @rental.price %></p>

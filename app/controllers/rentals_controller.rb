@@ -4,7 +4,7 @@ class RentalsController < ApplicationController
   end
 
   def create
-    Rental.create rental_params
+    Rental.create! rental_params
   end
 
   def index
@@ -20,7 +20,8 @@ class RentalsController < ApplicationController
   end
 
   def update
-    Rental.update rental_params
+    Rental.find(params[:id]).update! rental_params
+    redirect_to rental_path(params[:id])
   end
 
   def destroy
@@ -29,7 +30,7 @@ class RentalsController < ApplicationController
   end
 
   private def rental_params
-    params.require(:rental).permit( :street_address, :suburb, :price, :image )
+    params.require(:rental).permit Rental.list_params
   end
   
 end
