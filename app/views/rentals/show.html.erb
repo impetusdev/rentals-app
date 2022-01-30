@@ -1,4 +1,6 @@
 <h3><%= "Details for #{@rental.street_address}, #{@rental.suburb}" %></h3>
-<%# show details of the specific rental%>
-<%= image_tag @rental.image %>
+<%= link_to '[Edit]', rental_path(@rental.id) %>
+<%= link_to '[Delete]', rental_path(@rental.id), method: 'delete' %>
+<br>
+<%= image_tag @rental.image, class: 'rental_img' %>
 <p>Price: $<%= @rental.price %></p>

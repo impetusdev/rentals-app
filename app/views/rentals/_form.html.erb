@@ -1,0 +1,9 @@
+<%#think about making this even more dry accross different model%>
+<%= form_with model: @rental, local: true do |f| %>
+    <%# Loop over all the Rental params and make the label and text box %>
+    <% Rental.list_params.each do |param| %>
+        <%= f.label param %>
+        <%= f.text_field param%>
+        <br>
+    <% end %>
+<% end%>
