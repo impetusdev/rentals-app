@@ -78,3 +78,4 @@ d6 = Destination.create!(
 #u1.destinations << d1 << d2 << d3
 #u2.destinations << d4 << d5
 #u3.destinations << d6
+

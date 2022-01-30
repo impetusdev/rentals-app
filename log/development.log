@@ -3414,3 +3414,12 @@ Processing by DestinationsController#index as HTML
 Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/destinations" for ::1 at 2022-01-30 18:13:45 +1100
+Processing by DestinationsController#index as HTML
+  Rendering destinations/index.html.erb within layouts/application
+  [1m[36mDestination Load (0.7ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ app/views/destinations/index.html.erb:7
+  Rendered destinations/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 35ms (Views: 18.6ms | ActiveRecord: 12.9ms)
+
+
