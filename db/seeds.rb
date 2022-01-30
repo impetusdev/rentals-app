@@ -79,3 +79,20 @@ d6 = Destination.create!(
 #u2.destinations << d4 << d5
 #u3.destinations << d6
 
+puts 'Creating the suburbs table using a csv file'
+Suburb.destroy_all
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
+
+#TODO: NEED HELP REGARDING THIS. 
+csv.each do |row|
+    row = row.to_hash
+    Suburb.create!(
+        lga: row[row.keys[0]],
+        name: row['name'],
+        postcode: row['postcode'],
+        assault_rate: row['assault_rate']
+    )
+end
