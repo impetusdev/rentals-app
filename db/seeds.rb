@@ -32,21 +32,21 @@ puts 'Creating new Rental seed data'
 
 r1 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
     street_address: '8 Carrington Street',
-    suburb: 'Strathfield',
+    suburb_id: Suburb.find_by(name: 'STRATHFIELD').id,
     price: '690',
     image: 'https://i.imgur.com/XXENw5K.jpg?1'
 )
 
 r2 = Rental.create!( 
     street_address: '2E/19-21 George Street',
-    suburb: 'North Strathfield',
+    suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '610',
     image: 'https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg'
 )
 
 r3 = Rental.create!( 
     street_address: '2 Beronga Street',
-    suburb: 'North Strathfield',
+    suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '650',
     image: 'https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg'
 )
@@ -59,39 +59,39 @@ Destination.destroy_all
 # Laurence's
 d1 = Destination.create!(
     street_address: '12 Bowler Avenue',
-    suburb: 'Fairfield',
+    suburb_id: Suburb.find_by(name: 'FAIRFIELD').id,
     frequency: '2'
 )
 
 d2 = Destination.create!(
     street_address: '15 Broadway',
-    suburb: 'Ultimo',
+    suburb_id: Suburb.find_by(name: 'ULTIMO').id,
     frequency: '2'
 )
 
 d3 = Destination.create!(
     street_address: '129 Harrington street',
-    suburb: 'Sydney',
+    suburb_id: Suburb.find_by(name: 'SYDNEY').id,
     frequency: '0.3'
 )
 
 # Edward's
 d4 = Destination.create!(
     street_address: '85 Castlereagh street',
-    suburb: 'Sydney',
+    suburb_id: Suburb.find_by(name: 'SYDNEY').id,
     frequency: '2'
 )
 
 d5 = Destination.create!(
     street_address: '657 Punchbowl road',
-    suburb: 'Punchbowl',
+    suburb_id: Suburb.find_by(name: 'PUNCHBOWL').id,
     frequency: '0.75'
 )
 
 # Patrick's
 d6 = Destination.create!(
     street_address: 'F03, University of Sydney, Eastern Ave',
-    suburb: 'Camperdown',
+    suburb_id: Suburb.find_by(name: 'CAMPERDOWN').id,
     frequency: '3'
 )
 
