@@ -3,10 +3,13 @@
     <div><strong>Street</strong></div>
     <div><strong>Suburb</strong></div>
     <div><strong>Frequency (per week)</strong></div>
+    <div><strong>Safety (lower is better)</strong></div>
+
 
     <% @destinations.each do |destination| %>
         <div><%= link_to destination.street_address, destination_path(destination.id) %></div>
-        <div><%= destination.suburb %></div>
+        <div><%= destination.suburb.name %></div>
         <div><%= destination.frequency %></div>
+        <div><%= destination.suburb.assault_rate %></div>
     <% end %>
 </div>
