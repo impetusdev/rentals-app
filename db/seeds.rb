@@ -2,11 +2,10 @@ User.destroy_all
 
 puts 'Creating new User seed data'
 u1 = User.create!(
-username: 'impetus_dev',
+username: 'laurence',
 password_digest: 'chicken',
 time_value: 30
 )
-
 
 Rental.destroy_all
 
@@ -34,6 +33,48 @@ r3 = Rental.create!(
 
 u1.rentals << r1 << r2 << r3 # ask luke to find out what's wrong with this. 
 
-# print the testing data
+puts 'Creating new Destinations'
+Destination.destroy_all
 
-# Need to do the linking of the items 
+# Laurence's
+d1 = Destination.create!(
+    street_address: '12 Bowler Avenue',
+    suburb: 'Fairfield',
+    frequency: '2'
+)
+
+d2 = Destination.create!(
+    street_address: '15 Broadway',
+    suburb: 'Ultimo',
+    frequency: '2'
+)
+
+d3 = Destination.create!(
+    street_address: '129 Harrington street',
+    suburb: 'Sydney',
+    frequency: '0.3'
+)
+
+# Edward's
+d4 = Destination.create!(
+    street_address: '85 Castlereagh street',
+    suburb: 'Sydney',
+    frequency: '2'
+)
+
+d5 = Destination.create!(
+    street_address: '657 Punchbowl road',
+    suburb: 'Punchbowl',
+    frequency: '0.75'
+)
+
+# Patrick's
+d6 = Destination.create!(
+    street_address: 'F03, University of Sydney, Eastern Ave',
+    suburb: 'Camperdown',
+    frequency: '3'
+)
+
+#u1.destinations << d1 << d2 << d3
+#u2.destinations << d4 << d5
+#u3.destinations << d6

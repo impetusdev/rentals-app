@@ -26,8 +26,10 @@
     - link to the apartment
     - link to the apartment
 - destination_locations
-    - address
+    - street_address
+    - suburb (change to id optional)
     - frequency
+- create_destination_rental (3-way JOIN)
     - time taken for travel
 - user
     - name

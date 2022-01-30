@@ -1,0 +1,8 @@
+<%= form_with model: @destination, local: true do |f| %>
+    <%# Loop over all the Destination params and make the label and text box %>
+    <% Destination.list_params.each do |param| %>
+        <%= f.label param %>
+        <%= f.text_field param%>
+        <br>
+    <% end %>
+<% end%>
