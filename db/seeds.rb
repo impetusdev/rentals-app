@@ -9,7 +9,7 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 csv.each do |row|
     row = row.to_hash
     Suburb.create!(
-        lga: row[row.keys[0]],
+        lga: row['lga'],
         name: row['name'],
         postcode: row['postcode'],
         assault_rate: row['assault_rate']
