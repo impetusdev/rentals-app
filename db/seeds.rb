@@ -98,3 +98,11 @@ d6 = Destination.create!(
 #u1.destinations << d1 << d2 << d3
 #u2.destinations << d4 << d5
 #u3.destinations << d6
+
+puts 'Creating the travel_times'
+TravelTime.destroy_all
+
+origins = Rental.all
+destinations = Destination.all
+
+TravelTime.find_distances(destinations, origins)

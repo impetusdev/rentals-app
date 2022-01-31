@@ -1,6 +1,8 @@
 class Rental < ApplicationRecord
     has_and_belongs_to_many :users
     belongs_to :suburb
+    has_many :travel_times
+    
     require "uri" # TODO: check if you can comment this out. 
     # require 'httparty' #TODO: figure out why this httparty isn't working
     
@@ -25,32 +27,9 @@ class Rental < ApplicationRecord
         gym_address = gyms['vicinity'];
         gym_name = gyms['name']
         puts "#{gym_name} is located at #{gym_address}"
+        #TODO: user this gym data to perform a distance matrix query
     end
-
+    
     #using using arr of origins and destinations querying the Google Distance matrix API we can find the duration of travel the rental properties listed. 
     # private 
-    def find_distances()
-        origins = Rental.all
-        destinations = Destination.all
-        # TODO: do the full destinations/rentals for the seed data, Then one request for the new rental against existing distances and new destination against existing rentals. This will minimise api usage. 
-        # loop over each origin and each destination generating the url query. 
-        destination = ''
-        origin = ''
-
-        origins.each do |o|
-            origin += "#{o.street_address} #{o.suburb.name} NSW Australia".gsub(/\s/,'%20') + '%2CMA%7C'
-        end
-
-        destinations.each do |d|
-            destination += "#{d.street_address} #{d.suburb.name} NSW Australia".gsub(/\s/,'%20') + '%2CMA%7C'
-        end
-        
-        url = URI("https://maps.googleapis.com/maps/api/distancematrix/json?origins=#{origin}&destinations=#{destination}&mode=TRANSIT&key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko")
-        p "URL is: #{url}"
-        return
-        # api_obj = HTTParty.get(url)
-        # travel_time = api_obj['rows'][0]['elements'][0]['duration']['value']
-    end
 end
-
-# TODO: convert my matrix formula to this: url = URI("https://maps.googleapis.com/maps/api/distancematrix/json?origins=merrylands%20NSW%20aus%2CMA%7Cgranville%20nsw%20aus%2CMA&destinations=canberra%20ACT%20aus%2CMA%7Cfairfield%20NSW%20aus%2CMA&departure_time=now&key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko")
