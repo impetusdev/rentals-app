@@ -24,7 +24,6 @@ class TravelTime < ApplicationRecord
         # I need to loop over the rows and the elements to get the respective value which I can then use to add to the travel_time table
         api_obj['rows'].each.with_index do |row, i|
             row['elements'].each.with_index do |el, j|
-                binding.pry
                 TravelTime.create!(
                     destination_id: destinations[i].id,
                     rental_id: origins[i].id,
