@@ -4,15 +4,15 @@ class Rental < ApplicationRecord
     has_many :travel_times
     
     require "uri" # TODO: check if you can comment this out. 
-    # require 'httparty' #TODO: figure out why this httparty isn't working
     
+    # arr of symbols for quick use in partial render & form output params confirmation 
     def self.list_params
         [:street_address, :suburb_id, :price, :image]
     end
 
     # gets a hash with the nearest gyms to this rental address
     def find_gym
-        full_address = "#{street_address} #{suburb.name} NSW Australia".gsub(/\s/,'%20') #TODO: figure how to get these street_address values
+        full_address = "#{street_address} #{suburb.name} NSW Australia".gsub(/\s/,'%20')
     
         url = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{full_address}&key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko")
         # p "URL is: #{url}"

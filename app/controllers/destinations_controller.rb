@@ -5,6 +5,7 @@ class DestinationsController < ApplicationController
 
   def create
     destination = Destination.create! destination_params
+    
     TravelTime.find_travel_duration(Rental.all, [destination])
   end
 
@@ -23,10 +24,10 @@ class DestinationsController < ApplicationController
   def update
     destination = Destination.find(params[:id])
     destination.update! destination_params
+    
     TravelTime.find_travel_duration(Rental.all, [destination])
 
     redirect_to destination_path(params[:id])
-
   end
 
   def destroy
@@ -37,5 +38,4 @@ class DestinationsController < ApplicationController
   private def destination_params
     params.require(:destination).permit Destination.list_params
   end
-  
 end
