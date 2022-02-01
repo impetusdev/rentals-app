@@ -3,13 +3,14 @@
     <div><strong>Street</strong></div>
     <div><strong>Suburb</strong></div>
     <div><strong>Price (weekly)</strong></div>
-    <div><strong>Assaults/100,000</strong></div>
-
+    <div><strong>Travel Time (hrs/week)</strong></div>
+    <div><strong>Safety (lower is better)</strong></div>
 
     <% @rentals.each do |rental| %>
         <div><%= link_to rental.street_address, rental_path(rental.id) %></div>
         <div><%= rental.suburb.name %></div>
-        <div>$<%= rental.price %></div>
+        <div>$<%= rental.price.round 2 %></div>
+        <div><%= (rental.total_travel_time / 3600).round 2 %></div>
         <div><%= rental.suburb.assault_rate %></div>
     <% end %>
 </div>

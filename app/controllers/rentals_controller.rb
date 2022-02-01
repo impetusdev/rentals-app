@@ -1,17 +1,19 @@
 class RentalsController < ApplicationController
-  def new
+  def new 
     @rental = Rental.new
   end
 
   def create
-    # couldn't I just convert the params to an id here?
-    Rental.create! rental_params
+    rental = Rental.create! rental_params
+    # update the travel_time values when adding new location. 
+    TravelTime.find_travel_duration([rental], Destination.all) 
+    #FIXME: figure out why this value isn't updating
   end
 
   def index
     @rentals = Rental.all
   end
-
+  
   def show
     @rental = Rental.find params[:id]
   end
@@ -19,9 +21,13 @@ class RentalsController < ApplicationController
   def edit
     @rental = Rental.find params[:id]
   end
-
+  
   def update
-    Rental.find(params[:id]).update! rental_params
+    rental = Rental.find(params[:id])
+    rental.update! rental_params
+    TravelTime.find_travel_duration([rental], Destination.all)
+    
+
     redirect_to rental_path(params[:id])
   end
 

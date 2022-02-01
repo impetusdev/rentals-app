@@ -4,7 +4,8 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    Destination.create! destination_params
+    destination = Destination.create! destination_params
+    TravelTime.find_travel_duration(Rental.all, [destination])
   end
 
   def index
@@ -20,9 +21,12 @@ class DestinationsController < ApplicationController
   end
 
   def update
-    Destination.find(params[:id]).update! destination_params
+    destination = Destination.find(params[:id])
+    destination.update! destination_params
+    TravelTime.find_travel_duration(Rental.all, [destination])
+
     redirect_to destination_path(params[:id])
-    # I think it's actually using the destination variable, and saving
+
   end
 
   def destroy

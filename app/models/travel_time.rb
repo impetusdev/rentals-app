@@ -2,7 +2,7 @@ class TravelTime < ApplicationRecord
     belongs_to :destination # think aobut whether this association is correct
     belongs_to :rental # think aobut whether this association is correct
 
-    def self.find_distances(destinations, origins)
+    def self.find_travel_duration( origins, destinations)
         # TODO: do the full destinations/rentals for the seed data, Then one request for the new rental against existing distances and new destination against existing rentals. This will minimise api usage. 
         # loop over each origin and each destination generating the url query. 
         destination = ''
@@ -31,5 +31,15 @@ class TravelTime < ApplicationRecord
                 )
             end
         end
+
+        #TODO: create all the values of the total_time_taken
+
+        origins.each do |rental|
+            rental.total_travel_time = rental.travel_times.sum(&:duration) 
+            rental.save
+        end
+
+
+        #FIXME: Validation failed: Destination must exist, Rental must exist
     end
 end
