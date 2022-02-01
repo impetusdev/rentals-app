@@ -4,6 +4,7 @@ class RentalsController < ApplicationController
   end
 
   def create
+    # couldn't I just convert the params to an id here?
     Rental.create! rental_params
   end
 
@@ -30,6 +31,6 @@ class RentalsController < ApplicationController
   end
 
   private def rental_params
-    params.require(:rental).permit Rental.list_params
+    p params.require(:rental).permit Rental.list_params
   end
 end

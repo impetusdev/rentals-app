@@ -1,12 +1,16 @@
 <%#think about making this even more dry accross different model%>
+
+<%# need to load the suburbs here in the drop down. %>
+
 <%= form_with model: @rental, local: true do |f| %>
     <%# Loop over all the Rental params and make the label and text box %>
+    <%# TODO: make a search menu for this%>
     <% Rental.list_params.each do |param| %>
         <%= f.label param %>
         <%= f.text_field param%>
         <br>
     <% end %>
-    
+    <%# how to modify the input suburb so that it searches for it  %>
     <br>
     <%= f.submit %>
 <% end%>

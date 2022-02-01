@@ -31,6 +31,5 @@ class TravelTime < ApplicationRecord
                 )
             end
         end
-        #TODO: I THINK I NOW NEED TO UPDATE THE TRAVEL TIME COL IN THE RENTALS INDEX
     end
 end
