@@ -26,6 +26,12 @@ u1 = User.create!(
     time_value: 30
 )
 
+u2 = User.create!(
+    username: 'edward',
+    password_digest: 'chicken',
+    time_value: 25
+)
+
 
 Rental.destroy_all
 puts 'Creating new Rental seed data'
@@ -75,7 +81,7 @@ d3 = Destination.create!(
     frequency: '0.3'
 )
 
-# Edward's
+# Edward'sd
 d4 = Destination.create!(
     street_address: '85 Castlereagh street',
     suburb_id: Suburb.find_by(name: 'SYDNEY').id,
@@ -89,14 +95,14 @@ d5 = Destination.create!(
 )
 
 # Patrick's
-d6 = Destination.create!(
-    street_address: 'F03, University of Sydney, Eastern Ave',
-    suburb_id: Suburb.find_by(name: 'CAMPERDOWN').id,
-    frequency: '3'
-)
+# d6 = Destination.create!(
+#     street_address: 'F03, University of Sydney, Eastern Ave',
+#     suburb_id: Suburb.find_by(name: 'CAMPERDOWN').id,
+#     frequency: '3'
+# )
 
-#u1.destinations << d1 << d2 << d3
-#u2.destinations << d4 << d5
+u1.destinations << d1 << d2 << d3
+# u2.destinations << d4 << d5
 #u3.destinations << d6
 
 puts 'Creating the travel_times'

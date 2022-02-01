@@ -1,6 +1,6 @@
 class Rental < ApplicationRecord
-    has_and_belongs_to_many :users
     belongs_to :suburb
+    has_and_belongs_to_many :users
     has_many :travel_times
     
     require "uri" # TODO: check if you can comment this out. 
