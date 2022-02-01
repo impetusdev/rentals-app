@@ -7,7 +7,7 @@ class Rental < ApplicationRecord
     # require 'httparty' #TODO: figure out why this httparty isn't working
     
     def self.list_params
-        [:street_address, :suburb_id, :price, :image]
+        [:street_address, :price, :image]
     end
 
     # gets a hash with the nearest gyms to this rental address
