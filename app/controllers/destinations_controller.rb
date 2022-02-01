@@ -30,7 +30,7 @@ class DestinationsController < ApplicationController
     redirect_to destinations_path
   end
 
-  private def destination_param
+  private def destination_params
     params.require(:destination).permit Destination.list_params
   end
   

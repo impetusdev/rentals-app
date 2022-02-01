@@ -3,6 +3,6 @@ class Destination < ApplicationRecord
     has_many :travel_times
 
     def self.list_params
-        [:street_address, :suburb, :frequency]
+        [:street_address, :suburb_id, :frequency]
     end
 end

@@ -1,0 +1,16 @@
+<%= form_with model: model, local: true do |f| %>
+    <%# Loop over all the Destination params and make the label and text box %>
+    <% table.list_params.each do |param| %>
+        <% if param == :suburb_id %> <%# to produce select element%>
+            <%= f.label :suburb_id %>
+            <%= f.select :suburb_id, Suburb.all.map  { |suburb| [suburb.name ,suburb.id] }%>
+        <% else %>
+            <%= f.label param %>
+            <%= f.text_field param%>
+        <% end %>
+        <br>
+    <% end %>
+    
+    <br>
+    <%= f.submit %>
+<% end %>
