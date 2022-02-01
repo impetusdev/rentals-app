@@ -21,12 +21,12 @@ class Rental < ApplicationRecord
 
         lat_long = api_obj['results'][0]['geometry']['location'] # this is a hash
         url = URI("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{lat_long['lat']}%2C#{lat_long['lng']}&radius=1500&type=gym&key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko")
-        puts "The url for the google gyms request is: #{url}"
+        # puts "The url for the google gyms request is: #{url}"
 
         gyms = HTTParty.get(url)['results'][0];
         gym_address = gyms['vicinity'];
         gym_name = gyms['name']
-        puts "#{gym_name} is located at #{gym_address}"
+        # puts "#{gym_name} is located at #{gym_address}"
         #TODO: user this gym data to perform a distance matrix query
     end
     

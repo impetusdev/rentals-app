@@ -110,7 +110,7 @@ TravelTime.find_distances(destinations, origins)
 # for all rentals, sum the values in the travel_times
 Rental.all.each do |rental|
     # Add sum all the travel_times durations to this. 
-    rental.total_travel_time = rental.travel_times.inject(0) { |sum, travel_time| sum + travel_time.duration }
+    rental.total_travel_time = rental.travel_times.sum(&:duration)
     rental.save
 end
 
