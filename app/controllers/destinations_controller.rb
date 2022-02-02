@@ -1,16 +1,23 @@
 class DestinationsController < ApplicationController
+  before_action :check_if_logged_in 
+  
   def new
     @destination = Destination.new
   end
 
   def create
-    destination = Destination.create! destination_params
-    
+    #TODO: 
+    destination = Destination.create! destination_params 
+    @current_user.destinations << destination
     TravelTime.find_travel_duration(Rental.all, [destination])
   end
 
   def index
-    @destinations = Destination.all
+    #TODO: do you know why this uses, ids instead of id, and user instead of users
+    @destinations = Destination.select do |destination|
+      #where the users have atleast one value where it is true
+      destination.user.ids[0] == @current_user.id 
+    end
   end
 
   def show

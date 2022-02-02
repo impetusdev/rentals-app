@@ -28,14 +28,26 @@ class TravelTime < ApplicationRecord
         #3.
         api_obj['rows'].each.with_index do |row, i|
             row['elements'].each.with_index do |el, j|
-                TravelTime.create!(
-                    destination_id: destinations[i].id,
-                    rental_id: origins[i].id,
-                    duration: el['duration']['value']
-                )
+                #TODO: I think I need to check if the item exists
+                current_travel_time = TravelTime.find_by(rental_id: origins[i].id, destination_id: destinations[i].id)
+                # byebug
+                if current_travel_time.present?
+                    current_travel_time.update!(
+                        rental_id: origins[i].id, # TODO: I think I can remove these id values because they don't change
+                        destination_id: destinations[i].id,
+                        duration: el['duration']['value']
+                    )
+                else
+                    TravelTime.create!(
+                        rental_id: origins[i].id,
+                        destination_id: destinations[i].id,
+                        duration: el['duration']['value']
+                    )
+                end
             end
         end
         
+        byebug
         #4.
         origins.each do |rental|
             rental.total_travel_time = rental.travel_times.sum(&:duration) 

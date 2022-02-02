@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'session/new' => 'session#new '
-  post 'session/create' => 'session#create'
-  delete 'session/destroy' => 'session#destroy'
+  get '/login' => 'session#new' # shows the login form. 
+  post '/login' => 'session#create' #form submits to here
+  delete '/login' => 'session#destroy' # logout
   
   resources :destinations
   resources :rentals
