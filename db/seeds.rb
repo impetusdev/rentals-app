@@ -21,14 +21,14 @@ puts 'Creating new User seed data'
 User.destroy_all
 
 u1 = User.create!(
-    username: 'laurence',
-    password_digest: 'chicken',
+    username: 'l',
+    password: 'chicken',
     time_value: 30
 )
 
 u2 = User.create!(
     username: 'edward',
-    password_digest: 'chicken',
+    password: 'chicken',
     time_value: 25
 )
 
@@ -66,7 +66,7 @@ Destination.destroy_all
 d1 = Destination.create!(
     street_address: '12 Bowler Avenue',
     suburb_id: Suburb.find_by(name: 'FAIRFIELD').id,
-    frequency: '2'
+    frequency: '10'
 )
 
 d2 = Destination.create!(

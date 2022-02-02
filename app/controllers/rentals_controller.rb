@@ -1,4 +1,6 @@
 class RentalsController < ApplicationController
+  before_action :check_if_logged_in, except: [:index, :show]
+  
   def new 
     @rental = Rental.new
   end

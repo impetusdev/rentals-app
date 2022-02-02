@@ -3,6 +3,7 @@ body {
     color: #d1d0c5;
     font-family: 'Roboto', sans-serif;
     padding-left: 22px;
+    padding-right: 22px;
 }
 
 a {
@@ -58,6 +59,9 @@ hr.style-one {
     height: 1px;
     background: #ccc;
     background-image: linear-gradient(to right, #333, #ccc, #333);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* 
 hr.style-one {
@@ -72,6 +76,19 @@ hr.style-one {
 }
 
 .nav-link {
-    padding: 10px 10px 10px 0px;
-    font-size: large;
+    padding: 5px 5px 5px 0px;
+    font-size: medium;
+}
+
+span {
+    width:50%; 
+    display: inline-block; 
+}
+
+.align-right {
+    text-align: right; 
+}
+
+nav{
+    white-space: nowrap;
 }
