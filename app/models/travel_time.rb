@@ -30,7 +30,6 @@ class TravelTime < ApplicationRecord
             row['elements'].each.with_index do |el, j|
                 #TODO: I think I need to check if the item exists
                 current_travel_time = TravelTime.find_by(rental_id: origins[i].id, destination_id: destinations[i].id)
-                # byebug
                 if current_travel_time.present?
                     current_travel_time.update!(
                         rental_id: origins[i].id, # TODO: I think I can remove these id values because they don't change
@@ -47,7 +46,6 @@ class TravelTime < ApplicationRecord
             end
         end
         
-        byebug
         #4.
         origins.each do |rental|
             rental.total_travel_time = rental.travel_times.sum(&:duration) 

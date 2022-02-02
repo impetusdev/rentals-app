@@ -57,7 +57,23 @@ r3 = Rental.create!(
     image: 'https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg'
 )
 
+r4 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
+    street_address: '8 Carrington Street',
+    suburb_id: Suburb.find_by(name: 'STRATHFIELD').id,
+    price: '690',
+    image: 'https://i.imgur.com/XXENw5K.jpg?1'
+)
+
+r5 = Rental.create!( 
+    street_address: '2E/19-21 George Street',
+    suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
+    price: '610',
+    image: 'https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg'
+)
+
+
 u1.rentals << r1 << r2 << r3 # ask luke to find out what's wrong with this. 
+u2.rentals << r4 << r5 # ask luke to find out what's wrong with this. 
 
 puts 'Creating new Destinations'
 Destination.destroy_all
@@ -102,7 +118,7 @@ d5 = Destination.create!(
 # )
 
 u1.destinations << d1 << d2 << d3
-# u2.destinations << d4 << d5
+u2.destinations << d4 << d5
 #u3.destinations << d6
 
 puts 'Creating the travel_times'

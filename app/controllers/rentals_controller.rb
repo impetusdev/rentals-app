@@ -8,7 +8,8 @@ class RentalsController < ApplicationController
   def create
     rental = Rental.create! rental_params
     TravelTime.find_travel_duration([rental], Destination.all) 
-    byebug
+    # byebug
+    redirect_to rentals_path
   end
 
   def index
