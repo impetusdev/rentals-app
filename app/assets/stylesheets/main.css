@@ -122,18 +122,17 @@ nav{
     margin: auto;
     margin-top: 180px;
     padding: 80px;
-    width: 680px;
+    width: 900px;
 }
 
 #logo{
-    font-size: 50px;
+    font-size: 75px;
     margin-bottom: 16px;
 }
 
 #login{
     margin: 0px;
     padding-bottom: 10px;
-    
 }
 
 #login-btn{
@@ -166,3 +165,4 @@ select, input{
     background-color: #ffffff;
     margin: 2px;
 }
+
