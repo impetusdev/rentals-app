@@ -5,6 +5,14 @@ class Rental < ApplicationRecord
     
     require "uri" # TODO: check if you can comment this out. 
     
+    def self.all_owned(current_user = @current_user) #TODO: How do I get this default value even working?
+        self.select do |rental|
+            # byebug
+            #where the users have atleast one value where it is true
+            rental.users.any? {|user| user.id == current_user.id} 
+        end
+    end
+    
     # arr of symbols for quick use in partial render & form output params confirmation 
     def self.list_params
         [:street_address, :suburb_id, :price, :image]

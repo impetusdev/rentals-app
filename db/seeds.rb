@@ -16,7 +16,6 @@ csv.each do |row|
     )
 end
 
-
 puts 'Creating new User seed data'
 User.destroy_all
 
@@ -124,15 +123,22 @@ u2.destinations << d4 << d5
 puts 'Creating the travel_times'
 TravelTime.destroy_all
 
-origins = Rental.all
-destinations = Destination.all
+rentals_1 = Rental.all_owned User.first
+rentals_2 = Rental.all_owned User.second
 
-TravelTime.find_travel_duration(origins, destinations)
+destinations_1 = Destination.all_owned User.first
+destinations_2 = Destination.all_owned User.second
 
+#perform TravelTime.find_travel_duration for user 1 and user 2 
+TravelTime.find_travel_duration(rentals_1, destinations_1)
+TravelTime.find_travel_duration(rentals_2, destinations_2)
+
+# TravelTime.find_travel_duration(origins, destinations)
+
+#TODO: perform the total_travel_time calc for the current user destinations and rentals. 
 # for all rentals, sum the values in the travel_times
 Rental.all.each do |rental|
     # Add sum all the travel_times durations to this. 
-    #TODO: perform the total_travel_time calc for the current user destinations and rentals. 
     rental.total_travel_time = rental.travel_times.sum(&:duration)
     rental.save
 end

@@ -4,10 +4,10 @@ class Destination < ApplicationRecord
     has_many :travel_times
 
     # show all destinations owned by user. 
-    def self.all_owned
+    def self.all_owned (current_user = @current_user)
         self.select do |destination|
             #where the users have atleast one value where it is true
-            destination.user.ids[0] == @current_user.id 
+            destination.user.ids[0] == current_user.id 
         end
     end
 

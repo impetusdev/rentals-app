@@ -13,7 +13,7 @@ class RentalsController < ApplicationController
   end
 
   def index
-    @rentals = Rental.all
+    @rentals = Rental.all_owned(@current_user)
   end
   
   def show
