@@ -1,10 +1,10 @@
 <h3>All Rentals</h3>
 <div class="wrapper" id="rental-wrapper">
-    <div><strong>Street</strong></div>
+    <div><strong>Street</strong></div> 
     <div><strong>Suburb</strong></div>
-    <div><strong>Price (weekly)</strong></div>
-    <div><strong>Travel Time (hrs/week)</strong></div>
-    <div><strong>Safety (lower is better)</strong></div>
+    <div><strong><%= link_to 'Price (weekly)', rentals_path(order: 'price')%></strong></div> <%#change this to a link to refreshing the page with data.%>
+    <div><strong><%= link_to 'Travel Time (hrs/week)', rentals_path(order: 'travel_time')%></strong></div>
+    <div><strong><%= link_to 'Safety (lower is better)', rentals_path(order: 'assault_rate')%></strong></div>
 
     <% @rentals.each do |rental| %>
         <div><%= link_to rental.street_address, rental_path(rental.id) %></div>

@@ -15,8 +15,21 @@ class RentalsController < ApplicationController
   end
 
   def index
-    
     @rentals = Rental.all_owned(@current_user)
+
+    if params[:order] == 'price'
+      @rentals = @rentals.sort_by { |rental| rental.price }
+    end
+    
+    if params[:order] == 'travel_time'
+      @rentals = @rentals.sort_by { |rental| rental.total_travel_time }
+    end
+
+    if params[:order] == 'assault_rate'
+      @rentals = @rentals.sort_by { |rental| rental.suburb.assault_rate }
+    end
+
+    
   end
 
   def show
@@ -30,7 +43,6 @@ class RentalsController < ApplicationController
   def update
     rental = Rental.find(params[:id])
     rental.update! rental_params
-
     TravelTime.find_travel_duration([rental], Destination.all)#TODO: update me 
     
     redirect_to rental_path(params[:id])
