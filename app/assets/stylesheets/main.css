@@ -102,8 +102,13 @@ nav{
 }
 
 #right {
+    position: absolute;
+    top: 50%;
+    left: 56%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     display: inline-block;
-    float: right;
+
     background-color: #4a4a4a;
     padding: 30px;
     border-radius: 25px;
@@ -127,23 +132,23 @@ nav{
 
 #logo{
     font-size: 75px;
-    margin-bottom: 16px;
+    margin: 16px 0px 16px 0px;
 }
 
 #login{
     margin: 0px;
-    padding-bottom: 10px;
+    padding: 10px 0px 10px 0px;
 }
 
-#login-btn{
+.login-btn{
     background-color: #e2b714;
-    border-radius: 6px;
+    border-radius: 40px;
     /* width: 50px; */
     margin: auto;
     padding: 13px 56px;
     text-align: center;
     display: inline-block;
-    color: #323437;
+    color: hsl(216, 5%, 21%);
 }
 
 #error{
@@ -166,3 +171,26 @@ select, input{
     margin: 2px;
 }
 
+#login-image{
+    height: 100%;
+    width: 50%;
+    object-fit: none; /* Do not scale the image */
+
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -8px;
+}
+
+.form-popup {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: black;
+    display: none;
+    position: fixed;
+    bottom: 50%;
+
+    left: 37.5%;
+    width: 25%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
