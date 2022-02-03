@@ -199,3 +199,7 @@ select, input{
     z-index: 9;
 }
 
+.rental_img {
+    width: 700px;
+    padding-bottom: 0px;
+}
