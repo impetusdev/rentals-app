@@ -4,7 +4,12 @@ class UsersController < ApplicationController
 
   def create
     # add validation  to see if the user exists. 
-    User.create! user_params
+    User.create!(
+      username: params[:username],
+      password: params[:password]
+    )
+    
+    
     redirect_to rentals_path
 
     # user = User.find_by username: params[:username]
@@ -19,7 +24,9 @@ class UsersController < ApplicationController
     #   redirect_to rentals_path
     # end
 
-    private user_params
+  end
+
+    private def user_params
         params.require(:user).permit(:username, :password) 
     end
   end
