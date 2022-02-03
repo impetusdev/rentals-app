@@ -10,26 +10,30 @@
   </head>
 
   <body>
-    <h1>Rental Valuation DataBase</h1>
     <%# Wrap all those in a div for formatting%>
-    <nav>
-      <span>
-        <%= link_to 'All Rentals', rentals_path, class: 'nav-link' %>
-        <%= link_to 'Add Rental', new_rental_path, class: 'nav-link' %>
-        <%= link_to 'All Destinations', destinations_path, class: 'nav-link' %>
-        <%= link_to 'Add Destination', new_destination_path, class: 'nav-link' %>
-      </span>
-      <span class="align-right">
-        <% if @current_user.present? %>
-          <%= link_to 'Logout', login_path, method: 'delete', class: 'nav-link' %>
-        <% else %>
-          <%= link_to 'Login', login_path	, class: 'nav-link' %>
-          <%= link_to 'Sign Up', '/does-not-exist' %>
-        <% end%>
-      </span>
-    </nav>
+    <% unless controller_name=='session' && action_name == 'new' %>
     
-    <hr class="style-one">
+    <h1>Rental Valuation DataBase</h1>
+    <nav>
+        <span>
+          <%= link_to 'All Rentals', rentals_path, class: 'nav-link' %>
+          <%= link_to 'Add Rental', new_rental_path, class: 'nav-link' %>
+          <%= link_to 'All Destinations', destinations_path, class: 'nav-link' %>
+          <%= link_to 'Add Destination', new_destination_path, class: 'nav-link' %>
+        </span>
+        <span class="align-right">
+          <% if @current_user.present? %>
+            <%= link_to 'Logout', login_path, method: 'delete', class: 'nav-link' %>
+          <% else %>
+            <%= link_to 'Login', login_path	, class: 'nav-link' %>
+            <%= link_to 'Sign Up', '/does-not-exist' %>
+          <% end%>
+        </span>
+      </nav>
+      <hr class="style-one">
+    
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -7,7 +7,7 @@ class RentalsController < ApplicationController
 
   def create
     rental = Rental.create! rental_params
-    TravelTime.find_travel_duration([rental], Destination.all) 
+    TravelTime.find_travel_duration([rental], Destination.all) #TODO: update me 
     # byebug
     redirect_to rentals_path
   end
@@ -28,8 +28,7 @@ class RentalsController < ApplicationController
     rental = Rental.find(params[:id])
     rental.update! rental_params
 
-    #TODO: fix the fact that it is generating more copies of time travlled without cleaning up the other. 
-    TravelTime.find_travel_duration([rental], Destination.all)
+    TravelTime.find_travel_duration([rental], Destination.all)#TODO: update me 
     
     redirect_to rental_path(params[:id])
   end

@@ -82,7 +82,7 @@ Destination.destroy_all
 d1 = Destination.create!(
     street_address: '12 Bowler Avenue',
     suburb_id: Suburb.find_by(name: 'FAIRFIELD').id,
-    frequency: '10'
+    frequency: '2'
 )
 
 d2 = Destination.create!(
@@ -132,6 +132,7 @@ TravelTime.find_travel_duration(origins, destinations)
 # for all rentals, sum the values in the travel_times
 Rental.all.each do |rental|
     # Add sum all the travel_times durations to this. 
+    #TODO: perform the total_travel_time calc for the current user destinations and rentals. 
     rental.total_travel_time = rental.travel_times.sum(&:duration)
     rental.save
 end

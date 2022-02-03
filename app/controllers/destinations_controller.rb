@@ -6,10 +6,11 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    #TODO: 
     destination = Destination.create! destination_params 
     @current_user.destinations << destination
-    TravelTime.find_travel_duration(Rental.all, [destination])
+    TravelTime.find_travel_duration(Rental.all, [destination]) #TODO: Update me
+
+    redirect_to destinations_path
   end
 
   def index
@@ -32,12 +33,13 @@ class DestinationsController < ApplicationController
     destination = Destination.find(params[:id])
     destination.update! destination_params
     
-    TravelTime.find_travel_duration(Rental.all, [destination])
+    TravelTime.find_travel_duration(Rental.all, [destination]) #TODO: Update me
 
     redirect_to destination_path(params[:id])
   end
 
   def destroy
+    #TODO: update the total travel time due to this. 
     Destination.find(params[:id]).destroy
     redirect_to destinations_path
   end

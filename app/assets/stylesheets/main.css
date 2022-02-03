@@ -92,3 +92,60 @@ span {
 nav{
     white-space: nowrap;
 }
+
+#left {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 45px;
+}
+
+#right {
+    display: inline-block;
+    float: right;
+    background-color: #4a4a4a;
+    padding: 30px;
+    border-radius: 25px;
+
+    -moz-box-shadow:    3px 3px 5px 6px #2b2b2b;
+    -webkit-box-shadow: 3px 3px 5px 6px #2b2b2b;
+    box-shadow:         1px 1px 2px 2px #2b2b2b;
+}
+
+#tagline {
+    color: #e2b714;
+    margin: 0px
+}
+
+#container{
+    margin: auto;
+    margin-top: 180px;
+    padding: 80px;
+    width: 680px;
+}
+
+#logo{
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+
+#login{
+    margin: 0px;
+    padding-bottom: 10px;
+    
+}
+
+#login-btn{
+    background-color: #e2b714;
+    border-radius: 6px;
+    /* width: 50px; */
+    margin: auto;
+    padding: 13px 56px;
+    text-align: center;
+    display: inline-block;
+    color: #323437;
+}
+
+#error{
+    font-size: 12px;
+    color: rgb(255, 66, 98);
+}
