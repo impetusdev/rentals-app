@@ -60,4 +60,3 @@ class TravelTime < ApplicationRecord
         end
     end
 end
-

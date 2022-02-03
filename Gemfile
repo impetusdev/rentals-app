@@ -55,3 +55,6 @@ end
 
 gem 'pry-rails'
 gem 'httparty'
+
+gem 'jquery-rails'
+gem 'turbolinks'

@@ -188,14 +188,14 @@ select, input{
 .form-popup {
     padding: 30px;
     border-radius: 10px;
-    background-color: black;
+    background-color: rgb(103, 103, 103);
     display: none;
     position: fixed;
     bottom: 50%;
 
     left: 37.5%;
     width: 25%;
-    border: 3px solid #f1f1f1;
+    border: 3px solid #b0b0b0;
     z-index: 9;
 }
 

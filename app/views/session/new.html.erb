@@ -1,15 +1,20 @@
 <script>
+
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+    $("#left").css('opacity', '0.5');
+    $("#right").css('opacity', '0.5');
+    document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+    document.getElementById("myForm").style.display = "none";
+    $("#left").css('opacity', '1');
+    $("#right").css('opacity', '1');
 }
 
 </script>
 
-<div><%= image_tag 'https://i.imgur.com/UPW88cI.png', id: 'login-image' %></div>
+<div id="left"><%= image_tag 'https://i.imgur.com/UPW88cI.png', id: 'login-image' %></div>
 
 <div id="right">
     <h1 id="logo">Rental-Analytics</h1>    
@@ -40,7 +45,7 @@ function closeForm() {
 
 <div class="form-popup" id="myForm">
 
-
+    <h3 id="login">Sign up</h3>
     <%= form_with url: users_path, class: "form-container", local: true do |f| %>
         <%= f.label :username %>
         <br>
@@ -52,5 +57,5 @@ function closeForm() {
         <br><br>
         <%= f.submit 'Sign up', class: 'login-btn' %>
     <% end %>
-    <button class="login-btn" onclick="closeForm()">Close me</button>
+    <button class="login-btn" onclick="closeForm()">Close</button>
 </div>
