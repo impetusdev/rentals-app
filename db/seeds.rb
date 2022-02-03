@@ -46,28 +46,28 @@ r2 = Rental.create!(
     street_address: '2E/19-21 George Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '610',
-    image: 'https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg'
+    image: 'https://rimh2.domainstatic.com.au/iR5SYhdZA3AHoRxdt-dgiNxEr4Q=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017406862_2_1_211112_024307-w1920-h1280'
 )
 
 r3 = Rental.create!( 
     street_address: '2 Beronga Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '650',
-    image: 'https://i2.au.reastatic.net/808x1288-resize,extend,r=33,g=40,b=46/cd561f95dc4132527d03c7966bc92b1936424dd9404b1f91742139fdfeb816b6/image.jpg'
+    image: 'https://rimh2.domainstatic.com.au/xSI90FihRE763YNvA8VAHQf4QS0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017552859_1_1_220127_062442-w3500-h2333'
 )
 
 r4 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
     street_address: '8 Carrington Street',
     suburb_id: Suburb.find_by(name: 'STRATHFIELD').id,
     price: '690',
-    image: 'https://i.imgur.com/XXENw5K.jpg?1'
+    image: 'https://rimh2.domainstatic.com.au/iH2_WZPBOS9UpBcHyXLbTaQX8c8=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15685178_1_1_220128_023454-w800-h533'
 )
 
 r5 = Rental.create!( 
     street_address: '2E/19-21 George Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '610',
-    image: 'https://i2.au.reastatic.net/951x1292-resize,extend,r=33,g=40,b=46/d2e170bbd5bf9240b65a66ca962b07b3ae448ab17a2dd61ef2ec255f98105027/image2.jpg'
+    image: 'https://rimh2.domainstatic.com.au/8LJi6RWLbp18DuV-3hRlecCcfmI=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/12881684_1_1_190124_100618-w5184-h3456'
 )
 
 
