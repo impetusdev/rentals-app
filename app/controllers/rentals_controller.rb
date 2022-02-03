@@ -1,21 +1,24 @@
 class RentalsController < ApplicationController
-  before_action :check_if_logged_in, except: [:index, :show]
+  before_action :check_if_logged_in
   
   def new 
     @rental = Rental.new
   end
 
   def create
-    rental = Rental.create! rental_params
+    rental = Rental.new rental_params
+    rental.users << @current_user
+    rental.save
     TravelTime.find_travel_duration([rental], Destination.all) #TODO: update me 
-    # byebug
+
     redirect_to rentals_path
   end
 
   def index
+    
     @rentals = Rental.all_owned(@current_user)
   end
-  
+
   def show
     @rental = Rental.find params[:id]
   end

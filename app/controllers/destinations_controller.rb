@@ -6,19 +6,17 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    destination = Destination.create! destination_params 
-    @current_user.destinations << destination
+    destination = Destination.new destination_params
+    destination.user << @current_user
+    destination.save
+    
     TravelTime.find_travel_duration(Rental.all, [destination]) #TODO: Update me
 
     redirect_to destinations_path
   end
 
   def index
-    #TODO: do you know why this uses, ids instead of id, and user instead of users
-    @destinations = Destination.select do |destination|
-      #where the users have atleast one value where it is true
-      destination.user.ids[0] == @current_user.id 
-    end
+    @destinations = Destination.all_owned(@current_user)
   end
 
   def show
@@ -41,6 +39,10 @@ class DestinationsController < ApplicationController
   def destroy
     #TODO: update the total travel time due to this. 
     Destination.find(params[:id]).destroy
+    TravelTime.find_by(destination_id: params[:id]).destroy
+    
+    TravelTime.update_travel_duration @current_user.rentals
+    
     redirect_to destinations_path
   end
 

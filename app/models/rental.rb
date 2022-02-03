@@ -37,7 +37,6 @@ class Rental < ApplicationRecord
         # puts "#{gym_name} is located at #{gym_address}"
         #TODO: user this gym data to perform a distance matrix query
     end
-    
     #using using arr of origins and destinations querying the Google Distance matrix API we can find the duration of travel the rental properties listed. 
     # private 
 end

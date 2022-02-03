@@ -20,7 +20,6 @@ class TravelTime < ApplicationRecord
         end
         
         url = URI("https://maps.googleapis.com/maps/api/distancematrix/json?origins=#{origin}&destinations=#{destination}&mode=transit&key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko")
-        p "URL is: #{url}"
 
         #2.
         api_obj = HTTParty.get(url)
@@ -33,7 +32,7 @@ class TravelTime < ApplicationRecord
                 if current_travel_time.present?
                     current_travel_time.update!(
                         rental_id: origins[i].id, # TODO: I think I can remove these id values because they don't change
-                        destination_id: destinations[i].id,
+                        destination_id: destinations[j].id,
                         duration: el['duration']['value']
                     )
                 else
@@ -47,7 +46,15 @@ class TravelTime < ApplicationRecord
         end
         
         #4.
-        origins.each do |rental|
+        self.update_travel_duration origins
+        # origins.each do |rental|
+        #     rental.total_travel_time = rental.travel_times.sum(&:duration) 
+        #     rental.save
+        # end
+    end
+
+    def self.update_travel_duration rentals
+        rentals.each do |rental|
             rental.total_travel_time = rental.travel_times.sum(&:duration) 
             rental.save
         end
