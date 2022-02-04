@@ -1,16 +1,31 @@
+<script>
+    $('#street').hover(
+        function() {
+            $('#myform').css('display', 'block')
+        }, function() {
+
+        }
+    )
+</script>
+
 <h3>All Rentals</h3>
 <div class="wrapper" id="rental-wrapper">
     <div><strong>Street</strong></div> 
     <div><strong>Suburb</strong></div>
+    <div><strong><%= link_to 'Bedrooms', rentals_path(order: 'bedrooms')%></strong></div>
     <div><strong><%= link_to 'Price (weekly)', rentals_path(order: 'price')%></strong></div> <%#change this to a link to refreshing the page with data.%>
     <div><strong><%= link_to 'Travel Time (hrs/week)', rentals_path(order: 'travel_time')%></strong></div>
     <div><strong><%= link_to 'Safety (lower is better)', rentals_path(order: 'assault_rate')%></strong></div>
 
     <% @rentals.each do |rental| %>
-        <div><%= link_to rental.street_address, rental_path(rental.id) %></div>
+        <div id='street'><%= link_to rental.street_address, rental_path(rental.id) %></div>
         <div><%= rental.suburb.name %></div>
+        <div><%= rental.bedrooms %></div>
         <div>$<%= rental.price.round 2 %></div>
         <div><%= (rental.total_travel_time / 3600).round 2 %></div>
         <div><%= rental.suburb.assault_rate %></div>
+        <div class="form-popup" id="myForm">
+            <%= image_tag rental.image, class: 'rental_img' %>
+        </div>
     <% end %>
 </div>

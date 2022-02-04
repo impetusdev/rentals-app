@@ -15,7 +15,7 @@ class Rental < ApplicationRecord
     
     # arr of symbols for quick use in partial render & form output params confirmation 
     def self.list_params
-        [:street_address, :suburb_id, :price, :image]
+        [:street_address, :suburb_id, :price, :image, :bedrooms]
     end
 
     # gets a hash with the nearest gyms to this rental address

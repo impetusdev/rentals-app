@@ -4,4 +4,6 @@
 <br>
 
 <%= image_tag @rental.image, class: 'rental_img' %>
+<p><strong>Bedrooms:</strong> $<%= @rental.bedrooms %></p>
 <p><strong>Price:</strong> $<%= @rental.price %></p>
+<p><strong>Travel duration:</strong> <%= (@rental.total_travel_time / 3600 ).round 2 %> hours weekly</p>

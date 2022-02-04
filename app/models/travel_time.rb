@@ -47,10 +47,6 @@ class TravelTime < ApplicationRecord
         
         #4.
         self.update_travel_duration origins
-        # origins.each do |rental|
-        #     rental.total_travel_time = rental.travel_times.sum(&:duration) 
-        #     rental.save
-        # end
     end
 
     def self.update_travel_duration rentals

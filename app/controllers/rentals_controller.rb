@@ -17,19 +17,16 @@ class RentalsController < ApplicationController
   def index
     @rentals = Rental.all_owned(@current_user)
 
-    if params[:order] == 'price'
+    case params[:order]
+    when 'bedrooms'
+      @rentals = @rentals.sort_by { |rental| rental.bedrooms }
+    when 'price'
       @rentals = @rentals.sort_by { |rental| rental.price }
-    end
-    
-    if params[:order] == 'travel_time'
+    when 'travel_time'
       @rentals = @rentals.sort_by { |rental| rental.total_travel_time }
-    end
-
-    if params[:order] == 'assault_rate'
+    when 'assault_rate'
       @rentals = @rentals.sort_by { |rental| rental.suburb.assault_rate }
     end
-
-    
   end
 
   def show
@@ -55,6 +52,6 @@ class RentalsController < ApplicationController
   end
 
   private def rental_params
-    p params.require(:rental).permit(:street_address, :suburb_id, :price, :image) 
+    p params.require(:rental).permit Rental.list_params 
   end
 end
