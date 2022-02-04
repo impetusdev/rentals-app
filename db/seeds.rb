@@ -39,39 +39,83 @@ r1 = Rental.create!( #TODO: try generating seed data from the webscrapper afterw
     street_address: '8 Carrington Street',
     suburb_id: Suburb.find_by(name: 'STRATHFIELD').id,
     price: '690',
-    image: 'https://i.imgur.com/XXENw5K.jpg?1'
+    image: 'https://i.imgur.com/XXENw5K.jpg?1',
+    bedrooms: 2
 )
 
 r2 = Rental.create!( 
     street_address: '2E/19-21 George Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '610',
-    image: 'https://rimh2.domainstatic.com.au/iR5SYhdZA3AHoRxdt-dgiNxEr4Q=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017406862_2_1_211112_024307-w1920-h1280'
+    image: 'https://rimh2.domainstatic.com.au/iR5SYhdZA3AHoRxdt-dgiNxEr4Q=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017406862_2_1_211112_024307-w1920-h1280',
+    bedrooms: 3
 )
 
 r3 = Rental.create!( 
     street_address: '2 Beronga Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '650',
-    image: 'https://rimh2.domainstatic.com.au/xSI90FihRE763YNvA8VAHQf4QS0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017552859_1_1_220127_062442-w3500-h2333'
+    image: 'https://rimh2.domainstatic.com.au/xSI90FihRE763YNvA8VAHQf4QS0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2017552859_1_1_220127_062442-w3500-h2333',
+    bedrooms: 4
 )
 
 r4 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
     street_address: '8 Carrington Street',
     suburb_id: Suburb.find_by(name: 'STRATHFIELD').id,
     price: '690',
-    image: 'https://rimh2.domainstatic.com.au/iH2_WZPBOS9UpBcHyXLbTaQX8c8=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15685178_1_1_220128_023454-w800-h533'
+    image: 'https://rimh2.domainstatic.com.au/iH2_WZPBOS9UpBcHyXLbTaQX8c8=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15685178_1_1_220128_023454-w800-h533',
+    bedrooms: 2
 )
 
 r5 = Rental.create!( 
     street_address: '2E/19-21 George Street',
     suburb_id: Suburb.find_by(name: 'NORTH STRATHFIELD').id,
     price: '610',
-    image: 'https://rimh2.domainstatic.com.au/8LJi6RWLbp18DuV-3hRlecCcfmI=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/12881684_1_1_190124_100618-w5184-h3456'
+    image: 'https://rimh2.domainstatic.com.au/8LJi6RWLbp18DuV-3hRlecCcfmI=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/12881684_1_1_190124_100618-w5184-h3456',
+    bedrooms: 3
 )
 
+r6 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
+    street_address: 'H102/2 Quay Street',
+    suburb_id: Suburb.find_by(name: 'HAYMARKET').id,
+    price: '1300',
+    image: 'https://rimh2.domainstatic.com.au/VNWx4nUhmaZirp530uWk1e7jjZo=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15701102_1_1_220204_010848-w800-h533',
+    bedrooms: 3
+)
 
-u1.rentals << r1 << r2 << r3 # ask luke to find out what's wrong with this. 
+r7 = Rental.create!( 
+    street_address: '15B/5 St Annes Street',
+    suburb_id: Suburb.find_by(name: 'RYDE').id,
+    price: '640',
+    image: 'https://rimh2.domainstatic.com.au/Wtlzz0fAYx11MZwJnphP5kxurws=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2016603911_2_1_210702_013523-w3000-h2000',
+    bedrooms: 2
+)
+
+r8 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
+    street_address: 'Level 1, N109/233 Harris Street',
+    suburb_id: Suburb.find_by(name: 'PYRMONT').id,
+    price: '545',
+    image: 'https://rimh2.domainstatic.com.au/81aAFmHrngteZ8anH0Ruv0755R0=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15701051_1_1_220204_125837-w1500-h1000',
+    bedrooms: 1
+)
+
+r9 = Rental.create!( 
+    street_address: '22 Sutherland Street',
+    suburb_id: Suburb.find_by(name: 'LANE COVE').id,
+    price: '2100',
+    image: 'https://rimh2.domainstatic.com.au/jmXrRRtoSRi9a50LGfir2dzFjOs=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15701147_1_1_220204_012301-w1600-h1200',
+    bedrooms: 4
+)
+
+r10 = Rental.create!( #TODO: try generating seed data from the webscrapper afterwards
+    street_address: '9/18A Ewart Street',
+    suburb_id: Suburb.find_by(name: 'MARRICKVILLE').id,
+    price: '450',
+    image: 'https://rimh2.domainstatic.com.au/h0OO_mPZrPpp6KOql8Kt0LBBIcc=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/15701034_1_1_220204_125700-w1920-h1279',
+    bedrooms: 2
+)
+
+u1.rentals << r1 << r2 << r3 << r6 << r7 << r8 << r9 << r10 # ask luke to find out what's wrong with this. 
 u2.rentals << r4 << r5 # ask luke to find out what's wrong with this. 
 
 puts 'Creating new Destinations'

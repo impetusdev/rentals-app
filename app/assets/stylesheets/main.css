@@ -43,7 +43,7 @@ a:hover {
 }
 
 #rental-wrapper {
-    grid-template-columns: auto auto auto auto auto; 
+    grid-template-columns: auto auto auto auto auto auto; 
 }
 
 #destination-wrapper {
@@ -160,13 +160,9 @@ nav{
     color: rgb(129, 255, 66);
 }
 
-.form-heading{
-    margin-bottom: 4px;
-}
-
 #small-note{
     font-size: 16px;
-    margin: 2px 0px 8px 0px;
+    margin: 5px 0px 10px 0px;
 }
 
 select, input{
@@ -202,6 +198,7 @@ select, input{
 .rental_img {
     width: 700px;
     padding-bottom: 0px;
+    padding-top: 10px;
 }
 
 label, a.nav-link, div{
@@ -215,4 +212,5 @@ h3 {
 h1 {
     font-size: 60px;
     margin-bottom: 10px;
+    
 }
