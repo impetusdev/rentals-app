@@ -19,7 +19,7 @@ class RentalsController < ApplicationController
 
     case params[:order]
     when 'bedrooms'
-      @rentals = @rentals.sort_by { |rental| rental.bedrooms }
+      @rentals = @rentals.sort_by { |rental| rental.bedrooms }  #move into model, and scopes
     when 'price'
       @rentals = @rentals.sort_by { |rental| rental.price }
     when 'travel_time'

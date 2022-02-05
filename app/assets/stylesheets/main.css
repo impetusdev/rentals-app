@@ -27,14 +27,12 @@ a:hover {
 
 .wrapper {
     display: grid;
-    grid-template-columns: auto auto auto; 
     grid-gap: 10px;
     background-color: #4a4a4a;
     grid-column-gap: 30px;
     padding: 20px;
     width: fit-content;
     border-radius: 20px;
-
 }
 
 .grid-item {

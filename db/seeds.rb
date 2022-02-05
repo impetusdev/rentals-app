@@ -5,7 +5,7 @@ require 'csv'
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 
-#TODO: NEED HELP REGARDING THIS. 
+#TODO: LOOK INTO RAKE TASKS
 csv.each do |row|
     row = row.to_hash
     Suburb.create!(
