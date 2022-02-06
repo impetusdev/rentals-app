@@ -38,7 +38,7 @@ Temporary Items
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*
+log/*
 
 # ignore Rails cache files
 tmp/
