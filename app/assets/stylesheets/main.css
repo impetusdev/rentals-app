@@ -25,16 +25,6 @@ a:hover {
     padding-right: 100px;
 }
 
-.wrapper {
-    display: grid;
-    grid-gap: 10px;
-    background-color: #4a4a4a;
-    grid-column-gap: 30px;
-    padding: 20px;
-    width: fit-content;
-    border-radius: 20px;
-}
-
 .grid-item {
     width: fit-content;
     padding: 10px;
@@ -120,13 +110,6 @@ nav{
     color: #e2b714;
     margin: 0px
 }
-
-/* #container{
-    margin: auto;
-    margin-top: 180px;
-    padding: 80px;
-    width: 900px;
-} */
 
 #logo{
     font-size: 75px;
