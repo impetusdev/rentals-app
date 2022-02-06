@@ -9,25 +9,31 @@
 </script>
 
 <h3>All Rentals</h3>
-<div class="wrapper" id="rental-wrapper">
-    <div><strong>Street</strong></div> 
-    <div><strong>Suburb</strong></div>
-    <div><strong><%= link_to 'Bedrooms', rentals_path(order: 'bedrooms')%></strong></div>
-    <div><strong><%= link_to 'Price (weekly)', rentals_path(order: 'price')%></strong></div> <%#change this to a link to refreshing the page with data.%>
-    <div><strong><%= link_to 'Travel Time (hrs/week)', rentals_path(order: 'travel_time')%></strong></div>
-    <div><strong><%= link_to 'Safety (lower is better)', rentals_path(order: 'assault_rate')%></strong></div>
 
-    <% @rentals.each do |rental| %>
-        <div id='street'><%= link_to rental.street_address, rental_path(rental.id) %></div>
-        <div><%= rental.suburb.name %></div>
-        <div><%= rental.bedrooms %></div>
-        <div>$<%= rental.price.round 2 %></div>
-        <div><%= (rental.total_travel_time / 3600).round 2 %></div>
-        <div><%= rental.suburb.assault_rate %></div>
-        <div class="form-popup" id="myForm">
-            <%= image_tag rental.image, class: 'rental_img' %>
-        </div>
-    <% end %>
-</div>
-
-<%#TODO: use the tables for this.%>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th><strong>Street</strong></th> 
+            <th><strong>Suburb</strong></th>
+            <th><strong><%= link_to 'Bedrooms', rentals_path(order: 'bedrooms')%></strong></th>
+            <th><strong><%= link_to 'Price (weekly)', rentals_path(order: 'price')%></strong></th> <%#change this to a link to refreshing the page with data.%>
+            <th><strong><%= link_to 'Travel Time (hrs/week)', rentals_path(order: 'travel_time')%></strong></th>
+            <th><strong><%= link_to 'Safety (lower is better)', rentals_path(order: 'assault_rate')%></strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @rentals.each do |rental| %>
+            <tr>
+                <td id='street'><%= link_to rental.street_address, rental_path(rental.id) %></td>
+                <td><%= rental.suburb.name %></td>
+                <td><%= rental.bedrooms %></td>
+                <td>$<%= rental.price.round 2 %></td>
+                <td><%= (rental.total_travel_time / 3600).round 2 %></td>
+                <td><%= rental.suburb.assault_rate %></td>
+                <td class="form-popup" id="myForm">
+                    <%= image_tag rental.image, class: 'rental_img' %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
