@@ -43,6 +43,7 @@ log/*
 # ignore Rails cache files
 tmp/
 log/
+log/development.log
 
 !/log/.keep
 !/tmp/.keep
