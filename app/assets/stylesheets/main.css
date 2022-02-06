@@ -1,29 +1,10 @@
-body {
-    background-color: #323437;
-    color: #d1d0c5;
+/* body {
     font-family: 'Roboto', sans-serif;
     padding-left: 22px;
     padding-right: 22px;
-}
+} */
 
-a {
-    color: #e2b714;
-    font-family: 'Roboto', sans-serif;
-}
 
-a:hover {
-    color: #b08d0e;
-}
-
-.nav-bar {
-    padding: 10px;
-}
-
-#main {
-    padding: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
 
 .grid-item {
     width: fit-content;
@@ -82,7 +63,6 @@ nav{
     transform: translateY(-50%);
     display: inline-block;
 
-    background-color: #4a4a4a;
     padding: 30px;
     border-radius: 25px;
 
@@ -133,7 +113,6 @@ nav{
 
 select, input{
     border-radius: 4px;
-    background-color: #ffffff;
     margin: 2px;
 }
 
@@ -150,7 +129,6 @@ select, input{
 .form-popup {
     padding: 30px;
     border-radius: 10px;
-    background-color: rgb(103, 103, 103);
     display: none;
     position: fixed;
     bottom: 50%;

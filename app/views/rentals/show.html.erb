@@ -1,4 +1,4 @@
-<h3><%= "Details for #{@rental.street_address}, #{@rental.suburb.name}" %></h3>
+<h4 class="display-4"><%= "Details for #{@rental.street_address}, #{@rental.suburb.name}" %></h3>
 <%= link_to '[Edit]', edit_rental_path %>
 <%= link_to '[Delete]', rental_path(@rental.id), method: 'delete' %>
 <br>

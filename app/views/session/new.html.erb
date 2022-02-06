@@ -29,19 +29,24 @@ function closeForm() {
     <% end %>
     
     <%= form_with url: login_path, local: true do |f| %>
-        <%= f.label :username %>
-        <br>
-        <%= f.text_field :username %>
-        <br><br>
-        <%= f.label :password %>
-        <br>
-        <%= f.password_field :password %>
-        <br><br>
-        <%= f.submit 'Sign in', class: 'login-btn' %>
+        <div class="form-group">
+            <%= f.label :username %>
+            <%= f.text_field :username, class: 'form-control', placeholder: 'Enter username' %>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control", id: "exampleInputPassword1", placeholder: "Password" %>
+        </div>
+
+        <%= f.submit 'Sign in', class: 'btn btn-primary' %>
     <% end %>
-    
-    <button class="login-btn" onclick="openForm()">Signup</button>
+    <button type="button" class="btn btn-primary"  onclick="openForm()">Signup</button>
 </div>
+
+
+
 
 <div class="form-popup" id="myForm">
 
@@ -55,7 +60,7 @@ function closeForm() {
         <br>
         <%= f.password_field :password %>
         <br><br>
-        <%= f.submit 'Sign up', class: 'login-btn' %>
+        <%= f.submit 'Sign up', class: 'btn btn-primary' %>
     <% end %>
-    <button class="login-btn" onclick="closeForm()">Close</button>
+    <button class="class="btn btn-primary" onclick="closeForm()">Close</button>
 </div>
