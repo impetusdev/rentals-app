@@ -58,3 +58,4 @@ gem 'httparty'
 
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'bootstrap'

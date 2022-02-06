@@ -3,10 +3,7 @@ body {
     color: #d1d0c5;
     font-family: 'Roboto', sans-serif;
     padding-left: 22px;
-<<<<<<< HEAD
     padding-right: 22px;
-=======
->>>>>>> 2d0ea7389b734a666fd2c3b2591ae031638bda0b
 }
 
 a {
@@ -124,12 +121,12 @@ nav{
     margin: 0px
 }
 
-#container{
+/* #container{
     margin: auto;
     margin-top: 180px;
     padding: 80px;
     width: 900px;
-}
+} */
 
 #logo{
     font-size: 75px;
