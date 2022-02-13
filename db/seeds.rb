@@ -1,20 +1,20 @@
-puts 'Creating the suburbs table using a csv file'
-Suburb.destroy_all
-require 'csv'
+# puts 'Creating the suburbs table using a csv file'
+# Suburb.destroy_all
+# require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 
-#TODO: LOOK INTO RAKE TASKS
-csv.each do |row|
-    row = row.to_hash
-    Suburb.create!(
-        lga: row['lga'],
-        name: row['name'],
-        postcode: row['postcode'],
-        assault_rate: row['assault_rate']
-    )
-end
+# #TODO: LOOK INTO RAKE TASKS
+# csv.each do |row|
+#     row = row.to_hash
+#     Suburb.create!(
+#         lga: row['lga'],
+#         name: row['name'],
+#         postcode: row['postcode'],
+#         assault_rate: row['assault_rate']
+#     )
+# end
 
 puts 'Creating new User seed data'
 User.destroy_all
@@ -115,8 +115,10 @@ r10 = Rental.create!( #TODO: try generating seed data from the webscrapper after
     bedrooms: 2
 )
 
-u1.rentals << r1 << r2 << r3 << r6 << r7 << r8 << r9 << r10 # ask luke to find out what's wrong with this. 
-u2.rentals << r4 << r5 # ask luke to find out what's wrong with this. 
+Rental.all().map { |rental| rental.update(rental.get_lat_lng)  }
+
+u1.rentals << r1 << r2 << r3 << r6 << r7 << r8 << r9 << r10 
+u2.rentals << r4 << r5
 
 puts 'Creating new Destinations'
 Destination.destroy_all

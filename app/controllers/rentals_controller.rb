@@ -31,6 +31,8 @@ class RentalsController < ApplicationController
 
   def show
     @rental = Rental.find params[:id]
+    @iframe_url = "https://www.google.com/maps/embed/v1/place?key=AIzaSyAm7vYw4jkC7m9hbEKpMfFxjwLAOZgxwko&q=#{@rental.lat},#{@rental.lng}&maptype=satellite&zoom=17"
+    puts @iframe_url
   end
   
   def edit

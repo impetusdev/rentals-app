@@ -7,3 +7,4 @@
 <p><strong>Bedrooms:</strong> <%= @rental.bedrooms %></p>
 <p><strong>Price:</strong> $<%= @rental.price %></p>
 <p><strong>Travel duration:</strong> <%= (@rental.total_travel_time / 3600 ).round 2 %> hours weekly</p>
+<iframe width="400" height="300" style="border:0" loading="lazy" src="<%= @iframe_url %>"></iframe>

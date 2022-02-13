@@ -28,7 +28,14 @@ class TravelTime < ApplicationRecord
         api_obj['rows'].each.with_index do |row, i|
             row['elements'].each.with_index do |el, j|
                 #TODO: I think I need to check if the item exists
+
+                
+                ### TODO: need to check if the status returns ZERO RESULTS.
+                
+                
+                
                 current_travel_time = TravelTime.find_by(rental_id: origins[i].id, destination_id: destinations[j].id)
+                
                 if current_travel_time.present?
                     current_travel_time.update!(
                         rental_id: origins[i].id, # TODO: I think I can remove these id values because they don't change

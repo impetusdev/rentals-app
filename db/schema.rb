@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_02_03_235616) do
-=======
-ActiveRecord::Schema.define(version: 2022_01_30_114354) do
->>>>>>> 2d0ea7389b734a666fd2c3b2591ae031638bda0b
-=======
-ActiveRecord::Schema.define(version: 2022_02_03_235616) do
->>>>>>> 7a9257f6774f58b1a742ba6f64cf282fcac0b728
+ActiveRecord::Schema.define(version: 2022_02_13_121744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +38,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_235616) do
     t.float "gym_travel_time"
     t.float "total_travel_time"
     t.integer "bedrooms"
+    t.float "lat"
+    t.float "lng"
   end
 
   create_table "rentals_users", force: :cascade do |t|
