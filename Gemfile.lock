@@ -125,10 +125,7 @@ GEM
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     pg (1.3.1)
-<<<<<<< HEAD
     popper_js (2.9.3)
-=======
->>>>>>> 7a9257f6774f58b1a742ba6f64cf282fcac0b728
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
