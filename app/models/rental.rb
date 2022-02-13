@@ -25,7 +25,7 @@ class Rental < Location
 
         gyms = HTTParty.get(url)['results'][0];
         gym_address = gyms['vicinity'];
-        gym_name = gyms['name']
+        gym_name = gyms['name'] 
         # puts "#{gym_name} is located at #{gym_address}"
         #TODO: user this gym data to perform a distance matrix query
     end
