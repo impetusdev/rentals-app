@@ -31,7 +31,6 @@ u2 = User.create!(
     time_value: 25
 )
 
-
 Rental.destroy_all
 puts 'Creating new Rental seed data'
 

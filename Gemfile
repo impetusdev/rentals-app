@@ -56,11 +56,6 @@ end
 gem 'pry-rails'
 gem 'httparty'
 
-# gem 'jquery-rails'
-# gem 'bootstrap'
+gem 'jquery-rails'
 gem 'turbolinks'
-gem 'bcrypt'
-gem 'pry-rails'
-gem 'rack-cors'
-gem 'geocoder'
-gem 'jwt'
+gem 'bootstrap'
