@@ -1,7 +1,7 @@
 class TravelTime < ApplicationRecord
     belongs_to :destination # think aobut whether this association is correct
     belongs_to :rental # think aobut whether this association is correct
-
+    
     # 1. Converts all origin & destination addresses to the API query form
     # 2. Performs HTTP API request
     # 3. Writes the results to their respective TravelTime table rows. 
@@ -31,8 +31,6 @@ class TravelTime < ApplicationRecord
 
                 
                 ### TODO: need to check if the status returns ZERO RESULTS.
-                
-                
                 
                 current_travel_time = TravelTime.find_by(rental_id: origins[i].id, destination_id: destinations[j].id)
                 

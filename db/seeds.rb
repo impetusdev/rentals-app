@@ -1,20 +1,20 @@
 # puts 'Creating the suburbs table using a csv file'
 # Suburb.destroy_all
-# require 'csv'
+require 'csv'
 
-# csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
-# csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 
 # #TODO: LOOK INTO RAKE TASKS
-# csv.each do |row|
-#     row = row.to_hash
-#     Suburb.create!(
-#         lga: row['lga'],
-#         name: row['name'],
-#         postcode: row['postcode'],
-#         assault_rate: row['assault_rate']
-#     )
-# end
+csv.each do |row|
+    row = row.to_hash
+    Suburb.create!(
+        lga: row['lga'],
+        name: row['name'],
+        postcode: row['postcode'],
+        assault_rate: row['assault_rate']
+    )
+end
 
 puts 'Creating new User seed data'
 User.destroy_all
@@ -175,7 +175,6 @@ destinations_1 = Destination.all_owned User.first
 destinations_2 = Destination.all_owned User.second
 
 #perform TravelTime.find_travel_duration for user 1 and user 2 
-TravelTime.find_travel_duration(rentals_1, destinations_1)
 TravelTime.find_travel_duration(rentals_2, destinations_2)
 
 # TravelTime.find_travel_duration(origins, destinations)
