@@ -1,6 +1,6 @@
 # Rental-Assessor
 > Track prospective apartments & the travel times to your favourite locations
-> Live demo [_here_](https://www.example.com). 
+> Live demo [_here_](https://rentals-analyser.herokuapp.com/login). 
 
 ## Table of Contents
 * [General Info](#general-information)
