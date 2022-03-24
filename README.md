@@ -1,11 +1,26 @@
+# Rental-Assessor
+> Track prospective apartments & the travel times to your favourite locations
+> Live demo [_here_](https://www.example.com). 
 
-
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+<!-- * [License](#license) -->
 
 ## General Information
 - What problem does it (intend to) solve?
 The purpose of this application was to develop a rental apartment tracker full stack app. It offers an advantage over the current rental management websites, by tracking the travel times for each. 
 - What is the purpose of your project?
 - Why did you undertake it?
+
 ## Technologies Used
 - Ruby On Rails
 - BootStrap
