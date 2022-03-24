@@ -1,5 +1,6 @@
 # puts 'Creating the suburbs table using a csv file'
 # Suburb.destroy_all
+<<<<<<< HEAD
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
@@ -15,6 +16,23 @@ csv.each do |row|
         assault_rate: row['assault_rate']
     )
 end
+=======
+# require 'csv'
+
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'suburb_lga_assult.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
+
+# #TODO: LOOK INTO RAKE TASKS
+# csv.each do |row|
+#     row = row.to_hash
+#     Suburb.create!(
+#         lga: row['lga'],
+#         name: row['name'],
+#         postcode: row['postcode'],
+#         assault_rate: row['assault_rate']
+#     )
+# end
+>>>>>>> d7a55316e7c06dbb756c7d8a5811e1e2f31bb531
 
 puts 'Creating new User seed data'
 User.destroy_all

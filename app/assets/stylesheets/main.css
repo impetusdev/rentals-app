@@ -3,6 +3,7 @@
     padding-left: 22px;
     padding-right: 22px;
 } */
+<<<<<<< HEAD
 
 a {
     color: #e2b714;
@@ -13,6 +14,10 @@ a:hover {
     color: #b08d0e;
 }
 
+=======
+
+
+>>>>>>> d7a55316e7c06dbb756c7d8a5811e1e2f31bb531
 
 .grid-item {
     width: fit-content;
