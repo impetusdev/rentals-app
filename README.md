@@ -1,3 +1,21 @@
+
+
+
+## General Information
+- What problem does it (intend to) solve?
+The purpose of this application was to develop a rental apartment tracker full stack app. It offers an advantage over the current rental management websites, by tracking the travel times for each. 
+- What is the purpose of your project?
+- Why did you undertake it?
+## Technologies Used
+- Ruby On Rails
+- BootStrap
+
+## Features
+- Ability to track both your prospective rental Apartments
+- Track your weekly destinations (work, parents, friends & etc...)
+- Using Google Maps Distance Matrix API, the application provides a time travelled calculation. This allows the user to quickly determine if the rental aparment is in close proximity to key locations, like the station, gym etc. 
+
+
 # User Stories
 
 - [ ]  **View Properties (Insert/Seed into Dbs with rental properties from RealEstate.com) 4hrs**
